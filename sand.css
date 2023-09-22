@@ -86,11 +86,12 @@ div.hide {
     width: 100vw;
     height: fit-content;
     padding: 60px 0;
+    position: relative;
 
-    /*! Enlever pour déploiement*/
-    position: absolute;
+    /* ! Enlever pour déploiement*/
+    /* position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 
 .sliderDroite {
