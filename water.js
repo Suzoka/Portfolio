@@ -5,7 +5,7 @@ const slider = document.querySelector('.flexbox');
 const slides = document.querySelectorAll('.element');
 const hide = document.querySelector('.hide');
 
-document.querySelectorAll('div.element').forEach(function (element) {
+document.querySelectorAll('button.element').forEach(function (element) {
     element.addEventListener('click', function () {
         hide.style.overflow = "visible"
         element.style.zIndex = 1000;

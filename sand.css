@@ -21,7 +21,7 @@ body {
     transition: 2s;
 } */
 
-div.element {
+button.element {
     width: 400px;
     height: 250px;
     padding: 20px 25px;
@@ -33,13 +33,14 @@ div.element {
     justify-content: center;
     align-items: center;
     transition: 0.4s ease-out;
+    border: none;
 }
 
-div.element:hover {
+button.element:hover {
     scale: 1.03;
 }
 
-div.element::before {
+button.element::before {
     content: "";
     display: block;
     position: absolute;
@@ -51,7 +52,7 @@ div.element::before {
     transition: 0.4s ease-out;
 }
 
-div.element::after {
+button.element::after {
     content: "";
     display: block;
     position: absolute;
@@ -64,11 +65,11 @@ div.element::after {
     transition: 0.4s ease-out;
 }
 
-div.element:hover::after {
+button.element:hover::after {
     opacity: 100%;
 }
 
-div.element:hover::before {
+button.element:hover::before {
     opacity: 0%;
 }
 
@@ -119,7 +120,7 @@ div.hide {
 
 @media screen and (max-width: 768px) {
 
-    div.element{
+    button.element{
         flex-direction: column;
         width: 300px;
         height: 400px;
