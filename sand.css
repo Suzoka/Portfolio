@@ -25,8 +25,6 @@ div.element {
     width: 400px;
     height: 250px;
     padding: 20px 25px;
-    margin: auto;
-    margin-top: calc(50vh - 125px);
     background-color: #e0e0e0;
     border-radius: 50px;
     flex-shrink: 0;
@@ -79,12 +77,20 @@ div.flexbox {
     gap: 50px;
     position: relative;
     left: 25px;
+    transition: 1s;
+    align-items: center;
 }
 
 div.hide {
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    padding: 60px 0;
+
+    /*! Enlever pour déploiement*/
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .sliderDroite {
@@ -124,6 +130,10 @@ div.hide {
 
     div.hide{
         overflow-x: scroll;
+    }
+
+    div.flexbox{
+        left: 25px;
     }
 
 }

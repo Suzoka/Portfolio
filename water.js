@@ -13,9 +13,10 @@ document.querySelectorAll('div.element').forEach(function (element) {
 
 
 let position = 0;
-const droite = document.querySelector('.sliderDroite')
-const gauche = document.querySelector('.sliderGauche')
-const slider = document.querySelector('.flexbox')
+const droite = document.querySelector('.sliderDroite');
+const gauche = document.querySelector('.sliderGauche');
+const slider = document.querySelector('.flexbox');
+const slides = document.querySelectorAll('.element');
 
 //Si on clique sur la flèche de droite, on décale le slider vers la gauche
 droite.addEventListener('click', function () {
@@ -32,19 +33,10 @@ gauche.addEventListener('click', function () {
 
 
 function decaleGauche() {
-    //Si on arrive à la fin du slider, on revient au début en coupant l'animation (slider infini)
-    if (position == 4) {
-        slider.style.transition = "0s";
-        slider.style.left = "-22.5%";
-        setTimeout(function () {
-            slider.style.transition = "1s";
-            slider.style.left = "-68%";
-            position = 1;
-        }, 100);
-        return
+    if (position == slides.length-2) {
+        droite.style.display = "none";
     }
-    //Sinon on décale simplement le slider
-    slider.style.left = "-" + ((position) * 47 + 22.5) + "%";
+    slider.style.left = "-" + ((position) * 425)-25*(position-1) + "px";
 }
 
 //Si on arrive au début du slider, on revient à la fin en coupant l'animation (slider infini)
