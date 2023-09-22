@@ -15,6 +15,9 @@ document.querySelectorAll('button.element').forEach(function (element) {
         setTimeout(function () {
             element.style.transition = '0.5s';
             element.style.scale = 12;
+            setTimeout(function () {
+                window.location.href = "./projet.php?id=" + element.id;
+            }, 450);
         }, 200);
     });
 });
