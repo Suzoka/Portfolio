@@ -11,7 +11,7 @@ document.querySelectorAll('button.element').forEach(function (element) {
         element.style.zIndex = 1000;
         element.style.transition = '0.2s';
         element.style.scale = 0.75;
-        
+
         setTimeout(function () {
             element.style.transition = '0.5s';
             element.style.scale = 12;
@@ -37,11 +37,28 @@ gauche.addEventListener('click', function () {
 
 
 function decaleGauche() {
-    if (position == slides.length-2) {
-        droite.style.display = "none";
-    }
     gauche.style.display = "block";
-    slider.style.left = "-" + ((position) * 425)-25*(position-1) + "px";
+    slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) + "px";
+    if (((window.window.innerWidth / 460) % 1) >= 0.9 || ((window.window.innerWidth / 460) % 1) <= 0.25) {
+        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
+            droite.style.display = "none";
+        }
+    }
+
+    else if (((window.window.innerWidth / 460) % 1) < 0.9 && ((window.window.innerWidth / 460) % 1) >= 0.5) {
+        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)-1) {
+            slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) -150+ "px";
+            droite.style.display = "none";
+        }
+    }
+
+    else if (((window.window.innerWidth / 460) % 1) > 0.25 && ((window.window.innerWidth / 460) % 1) < 0.5) {
+        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
+            slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) +160+ "px";
+            droite.style.display = "none";
+        }
+    }
+
 }
 
 function decaleDroite() {
@@ -49,5 +66,5 @@ function decaleDroite() {
         gauche.style.display = "none";
     }
     droite.style.display = "block";
-    slider.style.left = "-" + ((position) * 425)-25*(position-1) + "px";
+    slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) + "px";
 }

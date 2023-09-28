@@ -5,7 +5,6 @@
 }
 
 body {
-    --screan: "Xlarge";
     margin: 0;
     background-color: #e0e0e0;
 }
@@ -89,11 +88,6 @@ div.hide {
     height: fit-content;
     padding: 60px 0;
     position: relative;
-
-    /* ! Enlever pour déploiement*/
-    /* position: absolute;
-    top: 50%;
-    transform: translateY(-50%); */
 }
 
 .sliderDroite {
@@ -121,6 +115,8 @@ div.hide {
 
 header{
     position: fixed;
+    display: flex;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -130,16 +126,14 @@ header{
 }
 
 nav{
-    margin-right: auto;
-    margin-left: auto;
     height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 50px;
 }
 
-nav a{
+header a{
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
 }
@@ -148,16 +142,23 @@ nav a:hover{
     color: rgba(255, 255, 255, 1);
 }
 
-nav img {
-    width: 40px;
-    height: 40px;
+header img {
+    height: 45px;
     border-radius: 50%;
     transition: 0.3s;
     filter: invert(95%);
+    margin-left: 10px;
 }
 
-nav img:hover {
+header img:hover {
     filter: invert(100%);
+}
+
+.banner{
+    background-color: black;
+    height: 75vh;
+    width: 100%;
+    border: solid red;
 }
 
 .sr-only {
@@ -173,31 +174,9 @@ nav img:hover {
     white-space: nowrap !important;
 }
 
-@media screen and (max-width: 1370px) {
-    body {
-        --screan: "large"
-    }
-}
-
-@media screen and (max-width: 915px) {
-    body {
-        --screan: "medium"
-    }
-}
-
-@media screen and (max-width: 500px) {
-    body {
-        --screan: "small"
-    }
-}
-
 
 /*? Pour le mobile*/
 @media screen and (max-width: 450px) {
-    body {
-        --screan: "mobile"
-    }
-
     button.element {
         flex-direction: column;
         width: 300px;
@@ -216,4 +195,7 @@ nav img:hover {
         left: 25px;
     }
 
+    .banner{
+        height: 30vh;
+    }
 }
