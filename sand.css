@@ -84,7 +84,7 @@ div.flexbox {
 
 div.hide {
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     padding: 60px 0;
     position: relative;
@@ -126,16 +126,21 @@ header{
 }
 
 nav{
+    max-width: 1000px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 header a{
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 nav a:hover{
@@ -143,7 +148,7 @@ nav a:hover{
 }
 
 header img {
-    height: 45px;
+    height: 40px;
     border-radius: 50%;
     transition: 0.3s;
     filter: invert(95%);
@@ -156,9 +161,8 @@ header img:hover {
 
 .banner{
     background-color: black;
-    height: 75vh;
+    height: 65vh;
     width: 100%;
-    border: solid red;
 }
 
 .sr-only {
