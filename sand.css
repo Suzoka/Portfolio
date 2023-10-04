@@ -174,12 +174,13 @@ header img {
     height: 40px;
     border-radius: 50%;
     transition: 0.3s;
-    filter: invert(95%);
+    filter: invert(100%);
     margin-left: 10px;
+    opacity: 0.8;
 }
 
 header img:hover {
-    filter: invert(100%);
+    opacity: 1;
 }
 
 .banner {
