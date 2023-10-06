@@ -5,8 +5,14 @@
     font-family: 'Merriweather', serif;
 }
 
-body {
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
     margin: 0;
+}
+
+body {
     background-color: #e0e0e0;
     font-weight: 300;
 }
@@ -104,7 +110,7 @@ div.hide {
     overflow: hidden;
     width: 100%;
     height: fit-content;
-    padding: 25px 0;
+    padding: 55px 0;
     position: relative;
 }
 
@@ -154,14 +160,14 @@ nav {
     margin-left: auto;
 }
 
-header a {
+header a, footer a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-nav a:hover {
+nav a:hover, footer a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
@@ -182,6 +188,27 @@ header img:hover {
     background-color: black;
     height: 65vh;
     width: 100%;
+}
+
+main{
+    flex-grow: 1;
+}
+
+footer {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  
+  .wrapper {
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .sr-only {
