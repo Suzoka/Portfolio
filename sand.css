@@ -5,7 +5,8 @@
     font-family: 'Merriweather', serif;
 }
 
-html, body {
+html,
+body {
     box-sizing: border-box;
     height: 100%;
     padding: 0;
@@ -30,7 +31,8 @@ body {
     filter: invert(100%);
 } */
 
-h1, h2{
+h1,
+h2 {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
 }
@@ -39,10 +41,11 @@ h1.title {
     color: white;
     font-size: 7rem;
     text-align: right;
-    margin: 0;
-    padding-top: 150px;
-    padding-right: 25px;
     line-height: 1;
+    margin-top: -112px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
 }
 
 button.element {
@@ -147,9 +150,10 @@ header {
     height: 45px;
     background-color: #161616cc;
     backdrop-filter: saturate(1.8) blur(20px);
+    z-index: 1000;
 }
 
-nav {
+nav, footer div{
     max-width: 1000px;
     height: 100%;
     width: 100%;
@@ -160,14 +164,16 @@ nav {
     margin-left: auto;
 }
 
-header a, footer a {
+header a,
+footer a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-nav a:hover, footer a:hover {
+nav a:hover,
+footer a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
@@ -188,27 +194,39 @@ header img:hover {
     background-color: black;
     height: 65vh;
     width: 100%;
+    position: relative;
 }
 
-main{
+main {
     flex-grow: 1;
 }
 
 footer {
     background-color: black;
     padding: 10px;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* footer div {
     display: flex;
     justify-content: center;
     gap: 25px;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-  
-  .wrapper {
+} */
+
+.wrapper {
     box-sizing: border-box;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.projet {
+    padding-top: 25px;
+    padding-left: 15px;
+    margin-bottom: -30px;
+    z-index: -1;
 }
 
 .sr-only {
@@ -224,6 +242,17 @@ footer {
     white-space: nowrap !important;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        height: 40vh;
+    }
+
+    h1.title {
+        font-size: 3.5rem;
+        margin-top: -28px;
+    }
+}
 
 /*? Pour le mobile*/
 @media screen and (max-width: 450px) {
@@ -246,6 +275,12 @@ footer {
     }
 
     .banner {
-        height: 30vh;
+        height: 25vh;
+        min-height: 250px;
+    }
+
+    h1.title {
+        font-size: 2.5rem;
+        margin-top: -20px;
     }
 }
