@@ -153,7 +153,8 @@ header {
     z-index: 1000;
 }
 
-nav, footer div{
+nav,
+footer div {
     max-width: 1000px;
     height: 100%;
     width: 100%;
@@ -209,12 +210,6 @@ footer {
     flex-shrink: 0;
 }
 
-/* footer div {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-} */
-
 .wrapper {
     box-sizing: border-box;
     min-height: 100%;
@@ -242,6 +237,35 @@ footer {
     white-space: nowrap !important;
 }
 
+.dynamique{
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -75px;
+}
+
+.dynamique p{
+    margin: 0;
+}
+
+.savoirFaire::after, .savoirEtre::after {
+    content: "|";
+    animation: blink ease 1s infinite;
+    margin-left: -2px;
+}
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    } 50% {
+      opacity: 1;
+    }
+  }
+
+  /* ! Fin du test */
 
 @media screen and (max-width: 1024px) {
     .banner {
