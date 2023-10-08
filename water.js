@@ -71,12 +71,12 @@ function decaleDroite() {
 // ? Base du code : https://codepen.io/varunpvp/pen/jeVLrG
 
 const zoneTexteFaire = document.querySelector(".savoirFaire");
-const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript."];
+const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade"];
 
 motsDynamiques(zoneTexteFaire, listeFaire);
 
 const zoneTexteEtre = document.querySelector(".savoirEtre");
-const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  "];
+const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant."];
 
 motsDynamiques(zoneTexteEtre, listeEtre);
 
