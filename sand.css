@@ -196,6 +196,7 @@ header img:hover {
     height: 65vh;
     width: 100%;
     position: relative;
+    height: 650px;
 }
 
 main {
@@ -237,7 +238,7 @@ footer {
     white-space: nowrap !important;
 }
 
-.dynamique{
+.dynamique {
     color: white;
     font-size: 3.5rem;
     font-weight: 700;
@@ -247,34 +248,89 @@ footer {
     margin-top: -75px;
 }
 
-.dynamique p{
+.dynamique p {
     margin: 0;
 }
 
-.savoirFaire::after, .savoirEtre::after {
+.savoirFaire::after,
+.savoirEtre::after {
     content: "|";
     animation: blink ease 1s infinite;
     margin-left: -2px;
 }
 
 @keyframes blink {
-    0%, 100% {
-      opacity: 0;
-    } 50% {
-      opacity: 1;
+
+    0%,
+    100% {
+        opacity: 0;
     }
-  }
 
-  /* ! Fin du test */
+    50% {
+        opacity: 1;
+    }
+}
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
+    .dynamique {
+        font-size: 2.5rem;
+        margin-top: -50px;
+    }
+
     .banner {
-        height: 40vh;
+        height: 430px;
+    }
+
+    h1.title {
+        font-size: 5rem;
+        margin-top: -56px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .dynamique {
+        font-size: 2.5rem;
+        margin-top: -50px;
     }
 
     h1.title {
         font-size: 3.5rem;
-        margin-top: -28px;
+        margin-top: -56px;
+    }
+
+    .banner {
+        height: 325px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .dynamique {
+        top: 270px;
+    }
+
+    h1.title {
+        top: 140px;
+    }
+
+    .banner {
+        height: 370px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .dynamique {
+        font-size: 1.5rem;
+        top: 220px;
+        left: 15px;
+    }
+
+    h1.title {
+        font-size: 2.5rem;
+        top: 120px;
+    }
+
+    .banner {
+        height: 270px;
     }
 }
 
@@ -299,12 +355,6 @@ footer {
     }
 
     .banner {
-        height: 25vh;
-        min-height: 250px;
-    }
-
-    h1.title {
-        font-size: 2.5rem;
-        margin-top: -20px;
+        height: 260px;
     }
 }
