@@ -38,20 +38,20 @@ function decaleGauche() {
     gauche.style.display = "block";
     slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) + "px";
     if (((window.window.innerWidth / 460) % 1) >= 0.9 || ((window.window.innerWidth / 460) % 1) <= 0.25) {
-        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
+        if (position == slides.length - Math.round(window.window.innerWidth / 460)) {
             droite.style.display = "none";
         }
     }
 
     else if (((window.window.innerWidth / 460) % 1) < 0.9 && ((window.window.innerWidth / 460) % 1) >= 0.5) {
-        if (position == slides.length - Math.trunc(window.window.innerWidth / 460) - 1) {
+        if (position == slides.length - Math.round(window.window.innerWidth / 460) - 1) {
             slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) - 150 + "px";
             droite.style.display = "none";
         }
     }
 
     else if (((window.window.innerWidth / 460) % 1) > 0.25 && ((window.window.innerWidth / 460) % 1) < 0.5) {
-        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
+        if (position == slides.length - Math.round(window.window.innerWidth / 460)) {
             slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) + 160 + "px";
             droite.style.display = "none";
         }
@@ -68,18 +68,20 @@ function decaleDroite() {
 }
 
 
-// ? Base du code : https://codepen.io/varunpvp/pen/jeVLrG
 
 const zoneTexteFaire = document.querySelector(".savoirFaire");
 const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade"];
 
-motsDynamiques(zoneTexteFaire, listeFaire);
-
 const zoneTexteEtre = document.querySelector(".savoirEtre");
 const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant."];
 
+setTimeout(function () {
+motsDynamiques(zoneTexteFaire, listeFaire);
 motsDynamiques(zoneTexteEtre, listeEtre);
+}, 1500);
 
+
+// ? Base du code : https://codepen.io/varunpvp/pen/jeVLrG
 function motsDynamiques(zoneTexte, liste) {
     // Variable qui indique si nous devons écrire ou effacer le mot
     let avancer = true;
