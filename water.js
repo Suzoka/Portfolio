@@ -1,3 +1,7 @@
+setTimeout(function(){
+    document.querySelector('video.logo').play()
+},600)
+
 document.querySelector('video.logo').addEventListener("ended",function (){
     document.querySelector('video.logo').style.scale="50"
     document.querySelector('div.video').style.opacity="0"
@@ -98,7 +102,7 @@ const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.  
 setTimeout(function () {
 motsDynamiques(zoneTexteFaire, listeFaire);
 motsDynamiques(zoneTexteEtre, listeEtre);
-}, 1500);
+}, 6000);
 
 
 // ? Base du code : https://codepen.io/varunpvp/pen/jeVLrG
