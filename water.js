@@ -1,14 +1,14 @@
-document.querySelector('video.logo').play()
 document.querySelector('video.logo').addEventListener("ended",function (){
     document.querySelector('video.logo').style.scale="50"
     document.querySelector('div.video').style.opacity="0"
     document.querySelector('.wrapper').style.display="flex"
     setTimeout(function(){
         document.querySelector('div.video').style.display="none"
-    },3000)
+    },2000)
 })
 
 //Peut être useless ?
+//
 // setTimeout(function(){
 //     document.querySelector('div.video').style.opacity="0"
 //     document.querySelector('.wrapper').style.display="flex"
