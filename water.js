@@ -1,3 +1,22 @@
+document.querySelector('video.logo').play()
+document.querySelector('video.logo').addEventListener("ended",function (){
+    document.querySelector('video.logo').style.scale="50"
+    document.querySelector('div.video').style.opacity="0"
+    document.querySelector('.wrapper').style.display="flex"
+    setTimeout(function(){
+        document.querySelector('div.video').style.display="none"
+    },3000)
+})
+
+//Peut être useless ?
+// setTimeout(function(){
+//     document.querySelector('div.video').style.opacity="0"
+//     document.querySelector('.wrapper').style.display="flex"
+//     setTimeout(function(){
+//         document.querySelector('div.video').style.display="none"
+//     },3000)
+// },3000)
+
 let position = 0;
 const droite = document.querySelector('.sliderDroite');
 const gauche = document.querySelector('.sliderGauche');
@@ -13,6 +32,7 @@ document.querySelectorAll('button.element').forEach(function (element) {
         element.style.scale = 0.75;
 
         setTimeout(function () {
+            document.querySelector('body').style.overflow="hidden"
             element.style.transition = '0.5s';
             element.style.scale = 12;
             setTimeout(function () {
