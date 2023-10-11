@@ -1,15 +1,21 @@
-setTimeout(function(){
-    document.querySelector('video.logo').play()
-},600)
+if (sessionStorage.getItem("video")) {
+    document.querySelector('div.video').style.display = "none"
+}
+else {
+    setTimeout(function () {
+        document.querySelector('video.logo').play()
+    }, 600)
 
-document.querySelector('video.logo').addEventListener("ended",function (){
-    document.querySelector('video.logo').style.scale="50"
-    document.querySelector('div.video').style.opacity="0"
-    document.querySelector('.wrapper').style.display="flex"
-    setTimeout(function(){
-        document.querySelector('div.video').style.display="none"
-    },2000)
-})
+    document.querySelector('video.logo').addEventListener("ended", function () {
+        document.querySelector('video.logo').style.scale = "50"
+        document.querySelector('div.video').style.opacity = "0"
+        document.querySelector('.wrapper').style.display = "flex"
+        setTimeout(function () {
+            document.querySelector('div.video').style.display = "none"
+            sessionStorage.setItem("video", true);
+        }, 2000)
+    })
+}
 
 //Peut être useless ?
 //
@@ -48,9 +54,9 @@ document.querySelectorAll('button.element').forEach(function (element) {
         document.querySelector('body').style.overflow = "hidden";
 
         setTimeout(function () {
-        clone.style.transition = "0.2s";
-        clone.style.scale = 0.75;
-        },10);
+            clone.style.transition = "0.2s";
+            clone.style.scale = 0.75;
+        }, 10);
 
         setTimeout(function () {
             clone.style.transition = '0.5s';
