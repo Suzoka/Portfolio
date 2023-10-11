@@ -1,15 +1,15 @@
-setTimeout(function(){
-    document.querySelector('video.logo').play()
-},600)
+// setTimeout(function(){
+//     document.querySelector('video.logo').play()
+// },600)
 
-document.querySelector('video.logo').addEventListener("ended",function (){
-    document.querySelector('video.logo').style.scale="50"
-    document.querySelector('div.video').style.opacity="0"
-    document.querySelector('.wrapper').style.display="flex"
-    setTimeout(function(){
-        document.querySelector('div.video').style.display="none"
-    },2000)
-})
+// document.querySelector('video.logo').addEventListener("ended",function (){
+//     document.querySelector('video.logo').style.scale="50"
+//     document.querySelector('div.video').style.opacity="0"
+//     document.querySelector('.wrapper').style.display="flex"
+//     setTimeout(function(){
+//         document.querySelector('div.video').style.display="none"
+//     },2000)
+// })
 
 //Peut être useless ?
 //
@@ -30,20 +30,36 @@ const hide = document.querySelector('.hide');
 
 document.querySelectorAll('button.element').forEach(function (element) {
     element.addEventListener('click', function () {
-        hide.style.overflow = "visible"
-        element.style.zIndex = 1000;
-        element.style.transition = '0.2s';
-        element.style.scale = 0.75;
+        const position = element.getBoundingClientRect();
+
+        const clone = element.cloneNode(true);
+        element.style.transition = 'none';
+        element.style.opacity = 0;
+
+
+        clone.style.top = position.top + "px";
+        clone.style.left = position.left + "px";
+        clone.style.position = "fixed";
+        clone.style.zIndex = 1000;
+        clone.style.scale = 1.03;
+
+
+        element.parentNode.append(clone)
+        document.querySelector('body').style.overflow = "hidden";
 
         setTimeout(function () {
-            document.querySelector('body').style.overflow="hidden"
-            element.style.transition = '0.5s';
-            element.style.scale = 12;
+        clone.style.transition = "0.2s";
+        clone.style.scale = 0.75;
+        },10);
+
+        setTimeout(function () {
+            clone.style.transition = '0.5s';
+            clone.style.scale = 12;
             setTimeout(function () {
-                window.location.href = "./projet.php?id=" + element.id;
+                // window.location.href = "./projet.php?id=" + element.id;
             }, 450);
         }, 200);
-    });
+    })
 });
 
 //Si on clique sur la flèche de droite, on décale le slider vers la gauche
@@ -62,20 +78,20 @@ function decaleGauche() {
     gauche.style.display = "block";
     slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) + "px";
     if (((window.window.innerWidth / 460) % 1) >= 0.9 || ((window.window.innerWidth / 460) % 1) <= 0.25) {
-        if (position == slides.length - Math.round(window.window.innerWidth / 460)) {
+        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
             droite.style.display = "none";
         }
     }
 
     else if (((window.window.innerWidth / 460) % 1) < 0.9 && ((window.window.innerWidth / 460) % 1) >= 0.5) {
-        if (position == slides.length - Math.round(window.window.innerWidth / 460) - 1) {
+        if (position == slides.length - Math.trunc(window.window.innerWidth / 460) - 1) {
             slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) - 150 + "px";
             droite.style.display = "none";
         }
     }
 
     else if (((window.window.innerWidth / 460) % 1) > 0.25 && ((window.window.innerWidth / 460) % 1) < 0.5) {
-        if (position == slides.length - Math.round(window.window.innerWidth / 460)) {
+        if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
             slider.style.left = "-" + ((position) * 425) - 25 * (position - 1) + 160 + "px";
             droite.style.display = "none";
         }
@@ -100,8 +116,8 @@ const zoneTexteEtre = document.querySelector(".savoirEtre");
 const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant."];
 
 setTimeout(function () {
-motsDynamiques(zoneTexteFaire, listeFaire);
-motsDynamiques(zoneTexteEtre, listeEtre);
+    motsDynamiques(zoneTexteFaire, listeFaire);
+    motsDynamiques(zoneTexteEtre, listeEtre);
 }, 6000);
 
 

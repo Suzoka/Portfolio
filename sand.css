@@ -59,7 +59,7 @@ button.element {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s ease-out;
+    transition: scale 0.4s ease-out;
     border: none;
 }
 
@@ -215,7 +215,7 @@ footer {
     box-sizing: border-box;
     min-height: 100%;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 }
 
 .projet {
@@ -262,7 +262,7 @@ footer {
 video.logo{
     width: 100%;
     height: 100%;
-    transition: 1.5s;
+    transition: 2s;
     /* filter: invert(100%); */
 }
 
@@ -274,7 +274,7 @@ div.video{
     position: absolute;
     z-index: 2000;
     overflow: hidden;
-    transition: 2s;
+    transition: 3s;
 }
 
 @keyframes blink {
