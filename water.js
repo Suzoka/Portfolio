@@ -1,15 +1,15 @@
-// setTimeout(function(){
-//     document.querySelector('video.logo').play()
-// },600)
+setTimeout(function(){
+    document.querySelector('video.logo').play()
+},600)
 
-// document.querySelector('video.logo').addEventListener("ended",function (){
-//     document.querySelector('video.logo').style.scale="50"
-//     document.querySelector('div.video').style.opacity="0"
-//     document.querySelector('.wrapper').style.display="flex"
-//     setTimeout(function(){
-//         document.querySelector('div.video').style.display="none"
-//     },2000)
-// })
+document.querySelector('video.logo').addEventListener("ended",function (){
+    document.querySelector('video.logo').style.scale="50"
+    document.querySelector('div.video').style.opacity="0"
+    document.querySelector('.wrapper').style.display="flex"
+    setTimeout(function(){
+        document.querySelector('div.video').style.display="none"
+    },2000)
+})
 
 //Peut être useless ?
 //
