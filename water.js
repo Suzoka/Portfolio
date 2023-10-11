@@ -56,7 +56,7 @@ document.querySelectorAll('button.element').forEach(function (element) {
             clone.style.transition = '0.5s';
             clone.style.scale = 12;
             setTimeout(function () {
-                // window.location.href = "./projet.php?id=" + element.id;
+                window.location.href = "./projet.php?id=" + element.id;
             }, 450);
         }, 200);
     })
