@@ -19,23 +19,24 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
 }
 
 h1.title {
     color: white;
-    font-size: 7rem;
+    font-size: 6rem;
     text-align: right;
     line-height: 1;
-    margin-top: -112px;
+    margin-top: -168px;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 25px;
 }
 
-button.element {
+a.lienProjet {
     width: 400px;
     height: 250px;
     padding: 20px 25px;
@@ -44,17 +45,18 @@ button.element {
     flex-shrink: 0;
     position: relative;
     display: flex;
+    gap: 25px;
     justify-content: center;
     align-items: center;
     transition: scale 0.4s ease-out;
     border: none;
 }
 
-button.element:hover {
+a.lienProjet:hover {
     scale: 1.03;
 }
 
-button.element::before {
+a.lienProjet::before {
     content: "";
     display: block;
     position: absolute;
@@ -66,7 +68,7 @@ button.element::before {
     transition: 0.4s ease-out;
 }
 
-button.element::after {
+a.lienProjet::after {
     content: "";
     display: block;
     position: absolute;
@@ -79,11 +81,11 @@ button.element::after {
     transition: 0.4s ease-out;
 }
 
-button.element:hover::after {
+a.lienProjet:hover::after {
     opacity: 100%;
 }
 
-button.element:hover::before {
+a.lienProjet:hover::before {
     opacity: 0%;
 }
 
@@ -205,7 +207,7 @@ footer {
     /* display: none; */
 }
 
-.projet {
+h2.projet {
     padding-top: 25px;
     padding-left: 15px;
     margin-bottom: -30px;
@@ -286,14 +288,14 @@ div.video{
 
     h1.title {
         font-size: 5rem;
-        margin-top: -56px;
+        margin-top: -120px;
     }
 }
 
 @media screen and (max-width: 1160px) {
     .dynamique {
         font-size: 2.5rem;
-        margin-top: -50px;
+        margin-top: -20px;
     }
 
     h1.title {
@@ -312,7 +314,7 @@ div.video{
     }
 
     h1.title {
-        top: 140px;
+        top: 125px;
     }
 
     .banner {
@@ -323,23 +325,23 @@ div.video{
 @media screen and (max-width: 575px) {
     .dynamique {
         font-size: 1.5rem;
-        top: 220px;
+        top: 225px;
         left: 15px;
     }
 
     h1.title {
         font-size: 2.5rem;
-        top: 120px;
+        top: 115px;
     }
 
     .banner {
-        height: 270px;
+        height: 280px;
     }
 }
 
 /*? Pour le mobile*/
 @media screen and (max-width: 450px) {
-    button.element {
+    a.lienProjet {
         flex-direction: column;
         width: 300px;
         height: 400px;
@@ -357,7 +359,4 @@ div.video{
         left: 25px;
     }
 
-    .banner {
-        height: 260px;
-    }
 }

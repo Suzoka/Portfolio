@@ -1,5 +1,8 @@
+let typing = 6000;
+
 if (sessionStorage.getItem("video")) {
     document.querySelector('div.video').style.display = "none"
+    typing = 1000;
 }
 else {
     setTimeout(function () {
@@ -31,11 +34,11 @@ let position = 0;
 const droite = document.querySelector('.sliderDroite');
 const gauche = document.querySelector('.sliderGauche');
 const slider = document.querySelector('.flexbox');
-const slides = document.querySelectorAll('.element');
-const hide = document.querySelector('.hide');
+const slides = document.querySelectorAll('.lienProjet');
 
-document.querySelectorAll('button.element').forEach(function (element) {
-    element.addEventListener('click', function () {
+slides.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
         const position = element.getBoundingClientRect();
 
         const clone = element.cloneNode(true);
@@ -116,15 +119,15 @@ function decaleDroite() {
 
 
 const zoneTexteFaire = document.querySelector(".savoirFaire");
-const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade"];
+const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade."];
 
 const zoneTexteEtre = document.querySelector(".savoirEtre");
-const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant."];
+const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant. "];
 
 setTimeout(function () {
     motsDynamiques(zoneTexteFaire, listeFaire);
     motsDynamiques(zoneTexteEtre, listeEtre);
-}, 6000);
+}, typing);
 
 
 // ? Base du code : https://codepen.io/varunpvp/pen/jeVLrG
