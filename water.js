@@ -1,15 +1,24 @@
-setTimeout(function(){
-    document.querySelector('video.logo').play()
-},600)
+let typing = 6000;
 
-document.querySelector('video.logo').addEventListener("ended",function (){
-    document.querySelector('video.logo').style.scale="50"
-    document.querySelector('div.video').style.opacity="0"
-    document.querySelector('.wrapper').style.display="flex"
-    setTimeout(function(){
-        document.querySelector('div.video').style.display="none"
-    },2000)
-})
+if (sessionStorage.getItem("video")) {
+    document.querySelector('div.video').style.display = "none"
+    typing = 1000;
+}
+else {
+    setTimeout(function () {
+        document.querySelector('video.logo').play()
+    }, 600)
+
+    document.querySelector('video.logo').addEventListener("ended", function () {
+        document.querySelector('video.logo').style.scale = "50"
+        document.querySelector('div.video').style.opacity = "0"
+        document.querySelector('.wrapper').style.display = "flex"
+        setTimeout(function () {
+            document.querySelector('div.video').style.display = "none"
+            sessionStorage.setItem("video", true);
+        }, 2000)
+    })
+}
 
 //Peut être useless ?
 //
@@ -25,11 +34,11 @@ let position = 0;
 const droite = document.querySelector('.sliderDroite');
 const gauche = document.querySelector('.sliderGauche');
 const slider = document.querySelector('.flexbox');
-const slides = document.querySelectorAll('.element');
-const hide = document.querySelector('.hide');
+const slides = document.querySelectorAll('.lienProjet');
 
-document.querySelectorAll('button.element').forEach(function (element) {
-    element.addEventListener('click', function () {
+slides.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
         const position = element.getBoundingClientRect();
 
         const clone = element.cloneNode(true);
@@ -48,15 +57,15 @@ document.querySelectorAll('button.element').forEach(function (element) {
         document.querySelector('body').style.overflow = "hidden";
 
         setTimeout(function () {
-        clone.style.transition = "0.2s";
-        clone.style.scale = 0.75;
-        },10);
+            clone.style.transition = "0.2s";
+            clone.style.scale = 0.75;
+        }, 10);
 
         setTimeout(function () {
             clone.style.transition = '0.5s';
             clone.style.scale = 12;
             setTimeout(function () {
-                // window.location.href = "./projet.php?id=" + element.id;
+                window.location.href = "./projet.php?id=" + element.id;
             }, 450);
         }, 200);
     })
@@ -110,15 +119,15 @@ function decaleDroite() {
 
 
 const zoneTexteFaire = document.querySelector(".savoirFaire");
-const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade"];
+const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade."];
 
 const zoneTexteEtre = document.querySelector(".savoirEtre");
-const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant."];
+const listeEtre = ["curieux.        ", "autonome. ", "passionné.", "sérieux.       ", "à l'écoute.  ", "souriant. "];
 
 setTimeout(function () {
     motsDynamiques(zoneTexteFaire, listeFaire);
     motsDynamiques(zoneTexteEtre, listeEtre);
-}, 6000);
+}, typing);
 
 
 // ? Base du code : https://codepen.io/varunpvp/pen/jeVLrG
