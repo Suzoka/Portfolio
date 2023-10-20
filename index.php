@@ -1,3 +1,5 @@
+<?php include './script/script.php'; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -70,24 +72,31 @@
             <h2 class="projet">Quelques-uns de mes projets :</h2>
             <div class="hide">
                 <div class="flexbox">
-                    <?php 
-                    include './script/database.php';
-                    $stmt = $db->prepare("SELECT * FROM `projets`");
-                    $stmt->execute();
-                    $projets = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    <?php
+                    $projets = getProjets();
                     foreach ($projets as $row) {
                         ?>
-                        <a class="lienProjet" id="<?=$row["id_projet"]?>" href="./projet.php?id=<?=$row["id_projet"]?>">
-                        <img src="./img/projet/<?=$row["id_projet"]?>.png" alt="" width="150px" class="logo">
-                        <div class="text">
-                            <h3><?=$row["nom_projet"]?></h3>
-                            <p><?=$row["description_rapide"]?></p>
-                        </div>
-                        <div class="theme"><p>PHP</p></div>
-                    </a>
-                        <?php
-                    }
-                    ?>
+                        <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=<?= $row["id_projet"] ?>">
+                            <img src="./img/projet/<?= $row["id_projet"] ?>.png" alt="" width="150px" class="logo">
+                            <div class="text">
+                                <h3>
+                                    <?= $row["nom_projet"] ?>
+                                </h3>
+                                <p>
+                                    <?= $row["description_rapide"] ?>
+                                </p>
+                            </div>
+                            <div class="theme">
+                                <?php
+                                $technos = getTechnos($row["id_projet"]);
+                                foreach ($technos as $tech) { ?>
+                                    <p style="--color:#<?= $tech["couleur_techno"] ?>;">
+                                        <?= $tech["nom_techno"] ?>
+                                    </p>
+                                <?php } ?>
+                            </div>
+                        </a>
+                    <?php } ?>
                 </div>
                 <img src="./img/fleche.svg" alt="" width="75" class="sliderDroite">
                 <img src="./img/fleche.svg" alt="" width="75" class="sliderGauche">

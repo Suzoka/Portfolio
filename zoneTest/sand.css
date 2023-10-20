@@ -63,12 +63,13 @@ a.lienProjet {
     display: flex;
     justify-content: center;
     width: 90%;
+    flex-wrap: wrap;
 }
 
 .theme p {
     padding: 3px 7px;
     border-radius: 25px;
-
+    flex-shrink: 0;
     border: solid 2px var(--color);
     box-shadow: 0 0 5px var(--color);
 }
