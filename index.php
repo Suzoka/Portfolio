@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil portfolio | Morgan ZARKA</title>
-    <link rel="stylesheet" href="sand.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
 <body>
 
     <div class="video">
-        <video src="./Composition 1.mp4" class="logo" muted></video>
+        <video src="./img/Composition 1.mp4" class="logo" muted></video>
     </div>
     <div class="wrapper">
         <header>
-            <a href="" title="" class="logo"><img src="./filigrane.svg" alt="Accueil"></a>
+            <a href="" title="" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
                 <a href="" title="">Qui suis-je ?</a>
                 <a href="" title="">Mes projets</a>
@@ -71,18 +71,26 @@
             <div class="hide">
                 <div class="flexbox">
                     <?php 
-                    include 'database.php';
-                    ?>
-                    <a class="lienProjet" id="1">
-                        <img src="./facteur.png" alt="" width="130px" class="logo">
+                    include './script/database.php';
+                    $stmt = $db->prepare("SELECT * FROM `projets`");
+                    $stmt->execute();
+                    $projets = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    foreach ($projets as $row) {
+                        ?>
+                        <a class="lienProjet" id="<?=$row["id_projet"]?>" href="./projet.php?id=<?=$row["id_projet"]?>">
+                        <img src="./img/projet/<?=$row["id_projet"]?>.png" alt="" width="150px" class="logo">
                         <div class="text">
-                            <h3>Titre</h3>
-                            <p>Rapide description du projet</p>
+                            <h3><?=$row["nom_projet"]?></h3>
+                            <p><?=$row["description_rapide"]?></p>
                         </div>
+                        <div class="theme"><p>PHP</p></div>
                     </a>
+                        <?php
+                    }
+                    ?>
                 </div>
-                <img src="./fleche.svg" alt="" width="75" class="sliderDroite">
-                <img src="./fleche.svg" alt="" width="75" class="sliderGauche">
+                <img src="./img/fleche.svg" alt="" width="75" class="sliderDroite">
+                <img src="./img/fleche.svg" alt="" width="75" class="sliderGauche">
             </div>
         </main>
 
@@ -96,7 +104,7 @@
     </div>
 
 
-    <script src="water.js" defer></script>
+    <script src="./script/script.js" defer></script>
 </body>
 
 </html>
