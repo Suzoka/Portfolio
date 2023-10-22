@@ -290,6 +290,50 @@ div.video {
     transition: 3s;
 }
 
+section.content {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.content br {
+    height: 5px;
+}
+
+.content h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.linkAlone {
+    text-decoration: none;
+    color: black;
+    margin: 25px auto -25px auto;
+    width: 250px;
+    height: 65px;
+    border-radius: 25px;
+    box-shadow:  7px 7px 14px #bebebe,
+    -7px -7px 14px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.linkAlone:hover {
+    cursor: pointer;
+    scale: 1.03;
+}
+
+.linkAlone:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
+}
+
 @keyframes blink {
 
     0%,
@@ -370,7 +414,7 @@ div.video {
     a.lienProjet {
         flex-direction: column;
         width: 300px;
-        height: 400px;
+        height: 450px;
     }
 
     .sliderDroite {

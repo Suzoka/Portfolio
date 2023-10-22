@@ -39,36 +39,11 @@
                     <p>J'aime l<span class="savoirFaire"></span></p>
                 </div>
             </div>
-
-            <h2>blabla</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veniam quia nostrum alias tempore incidunt
-                quam
-                laboriosam libero molestiae quis velit repellat voluptate deserunt veritatis cumque a officia vitae esse
-                ullam
-                corrupti id non, laborum excepturi in! Deleniti, illum. Quasi dignissimos tempora cum voluptate impedit,
-                nostrum
-                quis amet accusamus debitis tenetur optio, numquam odio iure maiores, earum incidunt eaque rem quidem
-                molestiae.
-                Id error sunt aut, consequuntur a ut eligendi cum sint nulla doloremque debitis impedit qui nisi sit
-                culpa. Ab
-                ipsam assumenda minima reiciendis aut tempora aperiam dicta quia nam ipsum fuga vitae omnis quam nemo,
-                est
-                voluptas id libero voluptatum. Id soluta, sit nisi quam dignissimos tempore consequuntur corporis hic
-                minus
-                fugit veritatis autem vero placeat iste facilis perferendis eos. Quasi suscipit expedita nemo vero
-                temporibus
-                adipisci mollitia officiis ad omnis maiores pariatur iusto dolore necessitatibus neque, tenetur harum
-                aspernatur
-                ab minima ipsam quae! Illo reiciendis soluta asperiores explicabo iste laudantium sit tempora aperiam
-                eveniet
-                sunt tenetur, modi aut numquam libero possimus tempore voluptatum doloremque excepturi temporibus
-                quibusdam
-                deserunt, nisi minima? Excepturi dolore inventore, similique et esse itaque illo nobis architecto sequi
-                asperiores. Aliquid earum dicta, porro iste voluptatum ipsa nemo? Minus odit obcaecati, iure consequatur
-                mollitia, dolorem assumenda deleniti sed fugit animi dolorum natus autem, officiis quibusdam tempore?
-                Repellendus magni repudiandae molestias rerum nulla. Vel veniam iusto libero tenetur deserunt quas
-                recusandae
-                quo enim. Laboriosam, reprehenderit commodi.</p>
+            <section class="content">
+                <h2>Bienvenue sur mon portfolio !</h2>
+                <p>Je m'appel Morgan, et suis étudiant en <span class="bold">BUT MMI</span>. Dans cette filière, j'ai choisis de suivre le parcours <span class="bold">"Développement Web et dispositifs intéractifs"</span>. Vous trouverez dans ce portfolio différents de mes projets, qu'ils soient personnels ou scolaire. <br><br> Avec ce portfolio, vous avez un moyen de plonger dans ce que je suis capable de faire ! <br><br>J'espère sincèrement que cette exploration à travers mon univers vous plaira.</p>
+                <a href="" class="linkAlone">En savoir plus sur moi</a>
+            </section>
             <h2 class="projet">Quelques-uns de mes projets :</h2>
             <div class="hide">
                 <div class="flexbox">
