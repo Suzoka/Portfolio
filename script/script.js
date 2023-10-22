@@ -66,6 +66,11 @@ slides.forEach(function (element) {
             clone.style.scale = 12;
             setTimeout(function () {
                 window.location.href = "./projet.php?id=" + element.id;
+                setTimeout(function () {
+                    clone.remove();
+                    element.removeAttribute('style');
+                    document.querySelector('body').style.overflow = "auto";
+                }, 100);
             }, 450);
         }, 200);
     })
