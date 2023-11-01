@@ -99,5 +99,3 @@
 </body>
 
 </html>
-
-<!--Pour un chargement de l'image au moment où elle apaprait : loading="lazy" -->

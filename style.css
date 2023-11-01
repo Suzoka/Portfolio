@@ -229,10 +229,9 @@ footer {
 }
 
 .wrapper {
-    box-sizing: border-box;
+    display: flex;
     min-height: 100%;
     flex-direction: column;
-    /* display: none; */
 }
 
 h2.projet {
