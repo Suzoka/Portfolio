@@ -96,6 +96,7 @@
 
 
     <script src="./script/script.js" defer></script>
+    <script src="./script/index.js" defer></script>
 </body>
 
 </html>
