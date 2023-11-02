@@ -4,7 +4,7 @@ include("database.php");
 function getProjets()
 {
     global $db;
-    $stmt = $db->prepare("SELECT * FROM `projets`");
+    $stmt = $db->prepare("SELECT * FROM `projets` ORDER BY CASE WHEN date_fin IS NULL THEN 0 ELSE 1 END, date_fin DESC, date_debut DESC;");
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }

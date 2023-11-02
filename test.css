@@ -1,0 +1,74 @@
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 80px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: 0;
+    bottom: -50px;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 6px;
+    left: 390px;
+    background-color: black;
+    top: 50px;
+    z-index: -1;
+}
+
+.container:nth-child(odd) {
+    left: 5%;
+}
+
+.container:nth-child(even) {
+    right: -60%;
+}
+
+.container:nth-child(even):after {
+    left: -122px;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .timeline{
+        width: fit-content;
+    }
+
+    .timeline::after {
+        left: 35px;
+    }
+
+    .container {
+        margin-top: 25px;
+        width: fit-content;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container:nth-child(odd):after,
+    .container:nth-child(even):after {
+        transform: translateX(0px);
+        left: 15px;
+    }
+
+    .container:nth-child(odd),.container:nth-child(even) {
+        left: 22px;
+    }
+}
