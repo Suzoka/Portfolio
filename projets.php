@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets | Morgan ZARKA</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="test.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -73,7 +71,8 @@
     </div>
 
 
-    <!-- <script src="./script/script.js" defer></script> -->
+    <script src="./script/script.js" defer></script>
+    <script src="./script/projets.js" defer></script>
 </body>
 
 </html>
