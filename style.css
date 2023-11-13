@@ -366,7 +366,7 @@ main.projet>* {
 
 main.projet img {
     grid-area: img;
-    height: 250px;
+    height: 350px;
     border-radius: 25px;
 }
 
@@ -395,7 +395,7 @@ main.projet div.infoAll {
     display: flex;
     flex-direction: column;
     align-self: end;
-    gap: 5px;
+    gap: 15px;
     width: 100%;
 }
 
@@ -492,7 +492,7 @@ main.projet div.infoSup>* {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 875px) {
     main.projet {
         grid-template-columns: 25px 1fr 25px;
         grid-template-rows: repeat(5, fit-content(100px));
@@ -508,6 +508,9 @@ main.projet div.infoSup>* {
         margin-bottom: 20px;
     }
 
+    main.projet img {
+        height: 50vw;
+    }
 }
 
 @media screen and (max-width: 575px) {
