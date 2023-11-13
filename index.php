@@ -21,11 +21,11 @@
 <body>
 
     <div class="video">
-        <video src="./img/Composition 1.mp4" class="logo" muted></video>
+        <video src="./img/animation.mp4" class="logo" muted></video>
     </div>
     <div class="wrapper">
         <header>
-            <a href="" title="" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
+            <a href="./index.php" title="Accueil" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
                 <a href="" title="">Qui suis-je ?</a>
                 <a href="./projets.php" title="Mes projets">Mes projets</a>
@@ -59,7 +59,7 @@
                     foreach ($projets as $row) {
                         ?>
                         <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=<?= $row["id_projet"] ?>">
-                            <img src="./img/<?= $row["url_img"] ?>" alt="" width="130px" class="logo">
+                            <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
                             <div class="text">
                                 <h3>
                                     <?= $row["nom_projet"] ?>

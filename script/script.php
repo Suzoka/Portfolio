@@ -9,13 +9,13 @@ function getProjets()
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function getProjetsById($id)
+function getProjetById($id)
 {
     global $db;
-    $stmt = $db->prepare("SELECT * FROM `projets` WHERE `id_projet` = :id");
+    $stmt = $db->prepare("SELECT * FROM `projets` p inner join `contexte` c on c.ext_id_projet = p.id_projet WHERE `id_projet` = :id;");
     $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
 function getSlider()
@@ -30,6 +30,15 @@ function getTechnos($id)
 {
     global $db;
     $stmt = $db->prepare('SELECT * FROM `technologies` t INNER JOIN `moyens` m ON t.id_techno = m.ext_id_techno WHERE m.ext_id_projet =' . $id . ';');
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function getParticipants($id)
+{
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM `membres` m INNER JOIN `groupes` g on m.id_membre = g.ext_id_membre WHERE g.ext_id_projet = :id;');
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }

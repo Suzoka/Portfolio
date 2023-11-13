@@ -73,6 +73,9 @@ a.lienProjet {
 
 .theme p {
     padding: 3px 7px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     border-radius: 25px;
     flex-shrink: 0;
     border: solid 2px var(--color);
@@ -129,6 +132,8 @@ div.flexbox {
 div.hide {
     overflow: hidden;
     width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 55px 0;
     position: relative;
@@ -166,7 +171,8 @@ header {
     width: 100%;
     height: 45px;
     background-color: #161616cc;
-    backdrop-filter: saturate(1.8) blur(20px);
+    -webkit-backdrop-filter: saturate(1.8) blur(20px);
+            backdrop-filter: saturate(1.8) blur(20px);
     z-index: 1000;
 }
 
@@ -199,7 +205,8 @@ header img {
     height: 40px;
     border-radius: 50%;
     transition: 0.3s;
-    filter: invert(100%);
+    -webkit-filter: invert(100%);
+            filter: invert(100%);
     margin-left: 10px;
     opacity: 0.8;
 }
@@ -271,7 +278,8 @@ h2.projet {
 .savoirFaire::after,
 .savoirEtre::after {
     content: "|";
-    animation: blink ease 1s infinite;
+    -webkit-animation: blink ease 1s infinite;
+            animation: blink ease 1s infinite;
     margin-left: -2px;
 }
 
@@ -335,6 +343,75 @@ section.content {
     box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
 }
 
+main.projet{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+    grid-template-columns: 3fr 2fr 25px;
+    grid-template-rows: repeat(4, fit-content(100px));
+    grid-template-areas: 
+    "img titre ."
+    "img texte ."
+    "img infos ."
+    "pin infos .";
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+main.projet>*{
+    margin: 0 auto;
+}
+
+main.projet img{
+    grid-area: img;
+    height: 250px;
+}
+
+main.projet h1{
+    grid-area: titre;
+}
+
+main.projet p.description{
+    grid-area: texte;
+    /* align-self: start; */
+}
+
+main.projet div.theme{
+    grid-area: pin;
+    margin-top: 15px;
+}
+
+main.projet div.theme>*{
+    margin: 0;
+}
+
+main.projet div.infoAll{
+    grid-area: infos;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    gap: 5px;
+    width: 100%;
+}
+
+main.projet p.membres{
+    margin: 0;
+}
+
+main.projet div.infoSup{
+    /* grid-area: infos; */
+    display: flex;
+    justify-content: start;
+    gap: 25px;
+}
+
+main.projet div.infoSup>*{
+    margin: 0;
+    display: block;
+}
+
 @keyframes blink {
 
     0%,
@@ -391,6 +468,24 @@ section.content {
     .banner {
         height: 370px;
     }
+}
+
+@media screen and (max-width: 750px) {
+    main.projet{
+        grid-template-columns: 25px 1fr 25px;
+        grid-template-rows: repeat(5, fit-content(100px));
+        grid-template-areas: 
+        ". titre ."
+        ". img ."
+        ". pin ."
+        ". texte ."
+        ". infos .";
+        gap: 15px;
+        max-width: 550px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
 }
 
 @media screen and (max-width: 575px) {
@@ -495,6 +590,8 @@ section.content {
 @media screen and (max-width: 1200px) {
 
     .timeline {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
 
@@ -508,6 +605,8 @@ section.content {
 
     .container {
         margin-top: 25px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         padding-left: 50px;
     }
@@ -534,6 +633,8 @@ section.content {
 
     .container {
         margin-top: 25px;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         padding-left: 10px;
     }
