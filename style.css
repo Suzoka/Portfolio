@@ -172,7 +172,7 @@ header {
     height: 45px;
     background-color: #161616cc;
     -webkit-backdrop-filter: saturate(1.8) blur(20px);
-            backdrop-filter: saturate(1.8) blur(20px);
+    backdrop-filter: saturate(1.8) blur(20px);
     z-index: 1000;
 }
 
@@ -206,7 +206,7 @@ header img {
     border-radius: 50%;
     transition: 0.3s;
     -webkit-filter: invert(100%);
-            filter: invert(100%);
+    filter: invert(100%);
     margin-left: 10px;
     opacity: 0.8;
 }
@@ -279,7 +279,7 @@ h2.projet {
 .savoirEtre::after {
     content: "|";
     -webkit-animation: blink ease 1s infinite;
-            animation: blink ease 1s infinite;
+    animation: blink ease 1s infinite;
     margin-left: -2px;
 }
 
@@ -343,53 +343,54 @@ section.content {
     box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
 }
 
-main.projet{
+main.projet {
     display: grid;
     justify-content: center;
     align-items: center;
     margin-top: 75px;
-    grid-template-columns: 3fr 2fr 25px;
+    grid-template-columns: 25px 3fr 15px 2fr 25px;
     grid-template-rows: repeat(4, fit-content(100px));
-    grid-template-areas: 
-    "img titre ."
-    "img texte ."
-    "img infos ."
-    "pin infos .";
+    grid-template-areas:
+        ". img . titre ."
+        ". img . texte ."
+        ". img . infos ."
+        ". pin . infos .";
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
 }
 
-main.projet>*{
+main.projet>* {
     margin: 0 auto;
 }
 
-main.projet img{
+main.projet img {
     grid-area: img;
     height: 250px;
+    border-radius: 25px;
 }
 
-main.projet h1{
+main.projet h1 {
     grid-area: titre;
     text-align: center;
     line-height: 1;
 }
 
-main.projet p.description{
+main.projet p.description {
     grid-area: texte;
     /* align-self: start; */
 }
 
-main.projet div.theme{
+main.projet div.theme {
     grid-area: pin;
     margin-top: 15px;
 }
 
-main.projet div.theme>*{
+main.projet div.theme>* {
     margin: 0;
 }
 
-main.projet div.infoAll{
+main.projet div.infoAll {
     grid-area: infos;
     display: flex;
     flex-direction: column;
@@ -398,20 +399,39 @@ main.projet div.infoAll{
     width: 100%;
 }
 
-main.projet p.membres{
+main.projet p.membres {
     margin: 0;
 }
 
-main.projet div.infoSup{
+main.projet div.infoSup {
     /* grid-area: infos; */
     display: flex;
     justify-content: start;
+    align-items: center;
     gap: 25px;
 }
 
-main.projet div.infoSup>*{
+main.projet div.infoSup>* {
     margin: 0;
     display: block;
+}
+
+.lienVersProjet {
+    box-shadow: 5px 5px 16px #696969,
+        -5px -5px 16px #ffffff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.lienVersProjet:hover {
+    cursor: pointer;
+}
+
+.lienVersProjet:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
 }
 
 @keyframes blink {
@@ -472,16 +492,16 @@ main.projet div.infoSup>*{
     }
 }
 
-@media screen and (max-width: 750px) {
-    main.projet{
+@media screen and (max-width: 800px) {
+    main.projet {
         grid-template-columns: 25px 1fr 25px;
         grid-template-rows: repeat(5, fit-content(100px));
-        grid-template-areas: 
-        ". titre ."
-        ". img ."
-        ". pin ."
-        ". texte ."
-        ". infos .";
+        grid-template-areas:
+            ". titre ."
+            ". img ."
+            ". pin ."
+            ". texte ."
+            ". infos .";
         gap: 15px;
         max-width: 550px;
         margin-top: 50px;
