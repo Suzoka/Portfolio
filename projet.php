@@ -30,56 +30,62 @@ if (isset($_GET["id"])) {
                 </nav>
             </header>
 
-            <main class="projet">
-                <h1>
-                    <?= $projet["nom_projet"] ?>
-                </h1>
-                <img src="./img/<?= $projet["url_image"] ?>" alt="">
-                <div class="theme">
-                    <?php
-                    $technos = getTechnos($projet["id_projet"]);
-                    foreach ($technos as $tech) { ?>
-                        <p style="--color:#<?= $tech["couleur_techno"] ?>;">
-                            <?= $tech["nom_techno"] ?>
-                        </p>
-                    <?php } ?>
+            <main>
+                <div class="ariane">
+                    <a href="javascript:history.back()" class="lienVersProjet lienRetour">Retour</a>
+                    <p class="filAriane"><a href="./Accueil.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a href="./projet.php?id=<?= $projet["id_projet"]?>"><?= $projet["nom_projet"]?></a></p>
                 </div>
-                <p class="description">
-                    <?= $projet["description_totale"] ?>
-                </p>
-                <div class="infoAll">
-                    <?php
-                    $participants = getParticipants($projet["id_projet"]);
-                    if (sizeof($participants) > 1) {
-                        ?>
-                        <p class="membres">Groupe du projet :
-                            <?php foreach ($participants as $participant) {
-                                ?><a href="<?= $participant["url_linkedin"] ?>">
-                                    <?= $participant["identite"] ?>
-                                </a>,
-                                <?php
-                            } ?>
-                        </p>
+                <div class="projet">
+                    <h1>
+                        <?= $projet["nom_projet"] ?>
+                    </h1>
+                    <a href="<?= $projet["url"] ?>"><img src="./img/<?= $projet["url_image"] ?>"
+                            alt="Lien vers le projet"></a>
+                    <div class="theme">
                         <?php
-                    } else {
-                        ?>
-                        <p class="membres">Projet fait seul</p>
-                        <?php
-                    }
-                    ?>
-                    <div class="infoSup">
-                        <p>Projet
-                            <?= $projet["nom_contexte"] ?>
-                        </p>
-
-                        <?php if ($projet["note_finale"] != NULL) { ?>
-                            <p>Note :
-                                <?= $projet["note_finale"] ?>/20
+                        $technos = getTechnos($projet["id_projet"]);
+                        foreach ($technos as $tech) { ?>
+                            <p style="--color:#<?= $tech["couleur_techno"] ?>;">
+                                <?= $tech["nom_techno"] ?>
                             </p>
                         <?php } ?>
-                        <?php if ($projet["url"] != NULL) { ?>
-                            <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le projet</a>
-                        <?php } ?>
+                    </div>
+                    <p class="description">
+                        <?= $projet["description_totale"] ?>
+                    </p>
+                    <div class="infoAll">
+                        <?php
+                        $participants = getParticipants($projet["id_projet"]);
+                        if (sizeof($participants) > 1) {
+                            ?>
+                            <p class="membres">Groupe du projet :
+                                <?php foreach ($participants as $participant) {
+                                    ?><a href="<?= $participant["url_linkedin"] ?>">
+                                        <?= $participant["identite"] ?>
+                                    </a>,
+                                    <?php
+                                } ?>
+                            </p>
+                            <?php
+                        } else {
+                            ?>
+                            <p class="membres">Projet fait seul</p>
+                            <?php
+                        }
+                        ?>
+                        <div class="infoSup">
+                            <p>Projet
+                                <?= $projet["nom_contexte"] ?>
+                            </p>
+                            <?php if ($projet["note_finale"] != NULL) { ?>
+                                <p>Note :
+                                    <?= $projet["note_finale"] ?>/20
+                                </p>
+                            <?php } ?>
+                            <?php if ($projet["url"] != NULL) { ?>
+                                <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le projet</a>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
             </main>

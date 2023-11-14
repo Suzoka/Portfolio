@@ -163,7 +163,8 @@ div.hide {
 }
 
 header {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     display: flex;
     align-items: center;
     top: 0;
@@ -174,6 +175,10 @@ header {
     -webkit-backdrop-filter: saturate(1.8) blur(20px);
     backdrop-filter: saturate(1.8) blur(20px);
     z-index: 1000;
+}
+
+.fixe{
+    position: fixed;
 }
 
 nav,
@@ -326,8 +331,8 @@ section.content {
     width: 250px;
     height: 65px;
     border-radius: 25px;
-    box-shadow: 6px 6px 19px #b3b3b3,
-        -6px -6px 19px #ffffff;
+    box-shadow: 5px 5px 16px #696969,
+        -5px -5px 16px #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,218 +348,10 @@ section.content {
     box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
 }
 
-main.projet {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    margin-top: 75px;
-    grid-template-columns: 25px 3fr 15px 2fr 25px;
-    grid-template-rows: repeat(4, fit-content(100px));
-    grid-template-areas:
-        ". img . titre ."
-        ". img . texte ."
-        ". img . infos ."
-        ". pin . infos .";
-    max-width: 1000px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-main.projet>* {
-    margin: 0 auto;
-}
-
-main.projet img {
-    grid-area: img;
-    height: 350px;
-    border-radius: 25px;
-}
-
-main.projet h1 {
-    grid-area: titre;
-    text-align: center;
-    line-height: 1;
-}
-
-main.projet p.description {
-    grid-area: texte;
-    /* align-self: start; */
-}
-
-main.projet div.theme {
-    grid-area: pin;
-    margin-top: 15px;
-}
-
-main.projet div.theme>* {
-    margin: 0;
-}
-
-main.projet div.infoAll {
-    grid-area: infos;
-    display: flex;
-    flex-direction: column;
-    align-self: end;
-    gap: 15px;
-    width: 100%;
-}
-
-main.projet p.membres {
-    margin: 0;
-}
-
-main.projet div.infoSup {
-    /* grid-area: infos; */
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 25px;
-}
-
-main.projet div.infoSup>* {
-    margin: 0;
-    display: block;
-}
-
-.lienVersProjet {
-    box-shadow: 5px 5px 16px #696969,
-        -5px -5px 16px #ffffff;
-    padding: 8px 15px;
-    border-radius: 15px;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-}
-
-.lienVersProjet:hover {
-    cursor: pointer;
-}
-
-.lienVersProjet:active {
-    box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .dynamique {
-        font-size: 2.5rem;
-        margin-top: -50px;
-    }
-
-    .banner {
-        height: 430px;
-    }
-
-    h1.title {
-        font-size: 5rem;
-        margin-top: -120px;
-    }
-}
-
-@media screen and (max-width: 1160px) {
-    .dynamique {
-        font-size: 2.5rem;
-        margin-top: -20px;
-    }
-
-    h1.title {
-        font-size: 3.5rem;
-        margin-top: -56px;
-    }
-
-    .banner {
-        height: 325px;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .dynamique {
-        top: 270px;
-    }
-
-    h1.title {
-        top: 125px;
-    }
-
-    .banner {
-        height: 370px;
-    }
-}
-
-@media screen and (max-width: 875px) {
-    main.projet {
-        grid-template-columns: 25px 1fr 25px;
-        grid-template-rows: repeat(5, fit-content(100px));
-        grid-template-areas:
-            ". titre ."
-            ". img ."
-            ". pin ."
-            ". texte ."
-            ". infos .";
-        gap: 15px;
-        max-width: 550px;
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
-    main.projet img {
-        height: 50vw;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .dynamique {
-        font-size: 1.5rem;
-        top: 225px;
-        left: 15px;
-    }
-
-    h1.title {
-        font-size: 2.5rem;
-        top: 115px;
-    }
-
-    .banner {
-        height: 280px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    a.lienProjet {
-        flex-direction: column;
-        width: 300px;
-        height: 450px;
-    }
-
-    .sliderDroite {
-        display: none;
-    }
-
-    div.hide {
-        overflow-x: scroll;
-    }
-
-    div.flexbox {
-        left: 25px;
-    }
-
-}
-
 .timeline {
     position: relative;
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 45px auto 80px auto;
 }
 
 .timeline::after {
@@ -612,6 +409,171 @@ main.projet div.infoSup>* {
     left: -122px;
 }
 
+div.projet {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    grid-template-columns: 25px 3fr 15px 2fr 25px;
+    grid-template-rows: repeat(4, fit-content(100px));
+    grid-template-areas:
+        ". img . titre ."
+        ". img . texte ."
+        ". img . infos ."
+        ". pin . infos .";
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+div.projet>* {
+    margin: 0 auto;
+}
+
+div.projet>a{
+    grid-area: img;
+}
+
+div.projet img {
+    height: 350px;
+    border-radius: 25px;
+}
+
+div.projet h1 {
+    grid-area: titre;
+    text-align: center;
+    line-height: 1;
+}
+
+div.projet p.description {
+    grid-area: texte;
+    font-size: 1.3rem;
+}
+
+div.projet div.theme {
+    grid-area: pin;
+    margin-top: 15px;
+    width: 100%;
+}
+
+div.projet div.theme>* {
+    margin: 0;
+}
+
+div.projet div.infoAll {
+    grid-area: infos;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+    gap: 15px;
+    width: 100%;
+}
+
+div.projet p.membres {
+    margin: 0;
+}
+
+div.projet div.infoSup {
+    /* grid-area: infos; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+}
+
+div.projet div.infoSup>* {
+    margin: 0;
+    display: block;
+}
+
+.lienVersProjet {
+    box-shadow: 5px 5px 16px #696969,
+        -5px -5px 16px #ffffff;
+    padding: 8px 15px;
+    border-radius: 15px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.lienVersProjet:hover {
+    cursor: pointer;
+    scale: 1.10;
+}
+
+.lienVersProjet:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
+}
+
+div.ariane{
+    display: flex;
+    max-width: 1500px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.lienRetour {
+    display: block;
+}
+
+.filAriane {
+    margin: 0;
+    margin-left: 15px;
+    align-self: center;
+}
+
+.filAriane a {
+    color: black;
+}
+
+.filAriane a:hover {
+    color: #545454;
+}
+
+@-webkit-keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .dynamique {
+        font-size: 2.5rem;
+        margin-top: -50px;
+    }
+
+    .banner {
+        height: 430px;
+    }
+
+    h1.title {
+        font-size: 5rem;
+        margin-top: -120px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
 
     .timeline {
@@ -647,6 +609,88 @@ main.projet div.infoSup>* {
     }
 }
 
+@media screen and (max-width: 1160px) {
+    .dynamique {
+        font-size: 2.5rem;
+        margin-top: -20px;
+    }
+
+    h1.title {
+        font-size: 3.5rem;
+        margin-top: -56px;
+    }
+
+    .banner {
+        height: 325px;
+    }
+}
+
+
+@media screen and (max-width: 1025px) {
+    div.projet {
+        grid-template-columns: 25px 1fr 25px;
+        grid-template-rows: repeat(5, fit-content(100px));
+        grid-template-areas:
+            ". titre ."
+            ". img ."
+            ". pin ."
+            ". texte ."
+            ". infos .";
+        gap: 15px;
+        max-width: 550px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    div.projet img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.projet div.theme {
+        margin: 0;
+    }
+
+    div.ariane{
+        margin-left: 10vw;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .dynamique {
+        top: 270px;
+    }
+
+    h1.title {
+        top: 125px;
+    }
+
+    .banner {
+        height: 370px;
+    }
+
+    div.projet p.description {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .dynamique {
+        font-size: 1.5rem;
+        top: 225px;
+        left: 15px;
+    }
+
+    h1.title {
+        font-size: 2.5rem;
+        top: 115px;
+    }
+
+    .banner {
+        height: 280px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .timeline::after {
         left: 10px;
@@ -668,4 +712,25 @@ main.projet div.infoSup>* {
     .container:nth-child(even):after {
         left: -15px;
     }
+}
+
+@media screen and (max-width: 450px) {
+    a.lienProjet {
+        flex-direction: column;
+        width: 300px;
+        height: 450px;
+    }
+
+    .sliderDroite {
+        display: none;
+    }
+
+    div.hide {
+        overflow-x: scroll;
+    }
+
+    div.flexbox {
+        left: 25px;
+    }
+
 }

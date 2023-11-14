@@ -24,7 +24,7 @@
         <video src="./img/animation.mp4" class="logo" muted></video>
     </div>
     <div class="wrapper">
-        <header>
+        <header class="fixe">
             <a href="./index.php" title="Accueil" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
                 <a href="" title="">Qui suis-je ?</a>
