@@ -146,3 +146,11 @@ function motsDynamiques(zoneTexte, liste) {
         zoneTexte.innerHTML = mot.substring(0, letterIndex);
     }
 }
+
+function refreshFiltres() {
+    document.querySelectorAll('.filtre select').forEach(function (element) {
+        element.addEventListener('change', function () {
+            document.querySelector('.filtres').submit();
+        });
+    });
+}

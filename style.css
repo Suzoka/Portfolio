@@ -534,6 +534,23 @@ div.ariane{
     color: #545454;
 }
 
+.filtres{
+    display: flex;
+    gap: 15px;
+    max-width: 1500px;
+    margin: 10px auto 0 auto;
+    justify-content: space-evenly;
+}
+
+.filtre {
+    width: 230px;
+    text-align: center;
+}
+
+.filtre select {
+    text-align: center;
+}
+
 @-webkit-keyframes blink {
 
     0%,

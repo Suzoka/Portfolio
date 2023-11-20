@@ -67,7 +67,8 @@ if (isset($_GET["id"])) {
                                 } ?>
                             </p>
                             <?php
-                        } else {
+                        } 
+                        else {
                             ?>
                             <p class="membres">Projet fait seul</p>
                             <?php
