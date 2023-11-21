@@ -1,5 +1,3 @@
-let i = 0;
-
 document.querySelectorAll(".slide").forEach(function (element) {
     element.addEventListener("click", function () {
         document.querySelector(".active").classList.add("nonActive")

@@ -228,6 +228,7 @@ header img:hover {
     width: 100%;
     position: relative;
     height: 650px;
+    margin-bottom: 15px;
 }
 
 main {
@@ -313,9 +314,10 @@ div.video {
 
 section.content {
     margin: 0 auto;
-    max-width: 800px;
-    text-align: center;
+    max-width: 1000px;
     line-height: 1.5;
+    padding: 20px;
+    padding-bottom: 5px;
 }
 
 .content br {
@@ -325,12 +327,14 @@ section.content {
 .content h1 {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .content h2 {
     font-size: 2.5rem;
     margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: -50px;
 }
 
 .bold {
@@ -342,7 +346,7 @@ section.content {
     color: black;
     margin: 25px auto -25px auto;
     width: 250px;
-    height: 65px;
+    height: 50px;
     border-radius: 25px;
     box-shadow: 5px 5px 16px #696969,
         -5px -5px 16px #ffffff;
@@ -573,6 +577,106 @@ div.ariane {
     text-align: center;
 }
 
+
+
+
+.containerSlides {
+    position: static;
+
+    width: 80%;
+    height: 550px;
+
+    margin: auto;
+    padding: 10px;
+}
+
+.containerSlides .cont {
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    width: 100px;
+    height: 100%;
+    justify-content: center;
+    margin: 0 10px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 5px 5px 16px #696969,
+        -5px -5px 16px #ffffff;
+    opacity: .5;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    border-radius: 25px;
+}
+
+.slide h3 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 7.5px;
+}
+
+.active {
+    flex-grow: 1;
+    transition: 1s;
+    opacity: 1;
+    padding: 0 10px;
+    padding-bottom: 10px;
+}
+
+.nonActive {
+    flex-grow: 0;
+    opacity: 0.5;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.active>* {
+    opacity: 1;
+    transition: 1s;
+}
+
+.nonActive>* {
+    opacity: 0;
+    transition: 1s;
+}
+
+.slide:nth-of-type(1) {
+    background-image: url('./img/escalade.jpg');
+}
+
+.slide:nth-of-type(2) {
+    background-image: url('./img/plongee.jpg');
+}
+
+.slide:nth-of-type(3) {
+    background-image: url('./img/apnee.jpg');
+}
+
+.slide:nth-of-type(4) {
+    background-image: url('https://mcdn.wallpapersafari.com/medium/28/35/fslPOF.jpg');
+}
+
+.texte {
+    padding: 10px 15px 15px 15px;
+    background-color: #000000bf;
+    margin: -10px;
+}
+
+.texte h1 {
+    margin: 0;
+}
+
+.texte p {
+    margin-bottom: 0;
+}
+
 @-webkit-keyframes blink {
 
     0%,
@@ -646,6 +750,10 @@ div.ariane {
     .container:nth-child(even) {
         left: 22px;
     }
+
+    .content h2 {
+        margin-left: 15px;
+    }
 }
 
 @media screen and (max-width: 1160px) {
@@ -692,6 +800,14 @@ div.ariane {
 
     div.ariane {
         margin-left: 10vw;
+    }
+
+    .slide {
+        width: 30px;
+    }
+
+    .containerSlides {
+        width: 100%;
     }
 }
 
@@ -770,120 +886,5 @@ div.ariane {
 
     div.flexbox {
         left: 25px;
-    }
-
-}
-
-
-
-
-
-
-
-.containerSlides {
-    position: static;
-
-    width: 80%;
-    height: 550px;
-
-    margin: auto;
-    padding: 10px;
-
-
-    margin-top: 25px;
-}
-
-.containerSlides .cont {
-    max-width: 1300px;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.slide {
-    min-width: 10px;
-    width: 100px;
-    height: 100%;
-    justify-content: center;
-    margin: 0 10px;
-    color: white;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 5px 5px 16px #696969,
-        -5px -5px 16px #ffffff;
-    opacity: .5;
-    overflow: hidden;
-    display: flex;
-    align-items: end;
-    border-radius: 25px;
-}
-
-
-.active {
-    flex-grow: 1;
-    transition-duration: 1s;
-    opacity: 1;
-    padding: 0 10px;
-    padding-bottom: 10px
-}
-
-.nonActive {
-    flex-grow: 0;
-    opacity: .5;
-    transition-duration: 1s;
-    cursor: pointer;
-}
-
-.active>* {
-    opacity: 1;
-    transition: 1s;
-}
-
-.nonActive>* {
-    opacity: 0;
-    transition: 1s;
-}
-
-
-
-.slide:nth-of-type(1) {
-    background-image: url('./img/escalade.jpg');
-}
-
-.slide:nth-of-type(2) {
-    background-image: url('./img/plongee.jpg');
-}
-
-.slide:nth-of-type(3) {
-    background-image: url('./img/apnee.jpg');
-}
-
-.slide:nth-of-type(4) {
-    background-image: url('https://mcdn.wallpapersafari.com/medium/28/35/fslPOF.jpg');
-}
-
-.texte {
-    padding: 10px 15px 15px 15px;
-    background-color: #00000091;
-    margin: -10px;
-}
-
-.texte h1 {
-    margin: 0;
-}
-
-.texte p {
-    margin-bottom: 0;
-}
-
-@media screen and (max-width: 700px) {
-    .slide {
-        width: 20px;
-    }
-
-    .active {
-        border-radius: 25px
     }
 }

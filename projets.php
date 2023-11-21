@@ -107,7 +107,7 @@ if (!isset($_POST["contexte"])) {
                                     <?php
                                     $technos = getTechnos($row["id_projet"]);
                                     foreach ($technos as $tech) { ?>
-                                        <p style="--color:#<?= $tech["couleur_techno"] ?>;" role="link" class="<?= $tech["id_techno"] ?>">
+                                        <p style="--color:#<?= $tech["couleur_techno"] ?>;" tabindex="0" role="link" class="<?= $tech["id_techno"] ?>">
                                             <?= $tech["nom_techno"] ?>
                                         </p>
                                     <?php } ?>

@@ -33,7 +33,7 @@ if (isset($_GET["id"])) {
             <main>
                 <div class="ariane">
                     <a href="javascript:history.back()" class="lienVersProjet lienRetour">Retour</a>
-                    <p class="filAriane"><a href="./Accueil.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a
+                    <p class="filAriane"><a href="./index.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a
                             href="./projet.php?id=<?= $projet["id_projet"] ?>">
                             <?= $projet["nom_projet"] ?>
                         </a></p>
