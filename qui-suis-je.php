@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Morgan ZARKA</title>
+  <title>Qui suis-je ? | Morgan ZARKA</title>
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,53 +29,59 @@
     </header>
 
     <main>
-
-
-      <div class="containerSlides">
-
-        <div class="cont">
-          <div class="slide slide1 active ">
-            <div class="texte">
-              <h1>Escalade</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
-              </p>
+      <section class="content">
+        <h1>Qui suis-je ?</h1>
+        <h2>Un peu plus sur moi</h2>
+        <h2>Mes passions</h2>
+        </section>
+        <div class="containerSlides">
+          <div class="cont">
+            <div class="slide slide1 active ">
+              <div class="texte">
+                <h1>Escalade</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                  reprehenderit
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div class="slide slide2 nonActive">
-            <div class="texte">
-              <h1>Plongée</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
-              </p>
+            <div class="slide slide2 nonActive">
+              <div class="texte">
+                <h1>Plongée</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                  reprehenderit
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div class="slide slide3 nonActive">
-            <div class="texte">
-              <h1>Apnée</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
-              </p>
+            <div class="slide slide3 nonActive">
+              <div class="texte">
+                <h1>Apnée</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                  reprehenderit
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div class="slide slide4 nonActive">
-            <div class="texte">
-              <h1>Photographie</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
-              </p>
+            <div class="slide slide4 nonActive">
+              <div class="texte">
+                <h1>Photographie</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                  reprehenderit
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </main>
+
+    <footer>
+      <div class="lien">
+        <a href="" title="">Mentions légales</a>
+        <a href="" title="">Plan du site</a>
+      </div>
+    </footer>
 
     <script src="./script/script.js"></script>
     <script src="./script/qui-suis-je.js"></script>
