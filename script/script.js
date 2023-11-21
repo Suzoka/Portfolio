@@ -160,7 +160,18 @@ function refreshFiltres() {
 function addTechnosLinks() {
     document.querySelectorAll('.theme p').forEach(function (element) {
         element.addEventListener('click', function () {
-            const filtre = element.getAttribute('class');
+            liens(element);
+        });
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key == "Enter") {
+            liens(document.activeElement);
+        }
+    });
+}
+
+function liens(element){
+    const filtre = element.getAttribute('class');
             let formulaire = document.createElement('form');
             document.body.appendChild(formulaire);
             formulaire.method = 'post';
@@ -173,6 +184,4 @@ function addTechnosLinks() {
             formulaire.appendChild(input);
 
             formulaire.submit();
-        });
-    });
 }
