@@ -33,7 +33,7 @@ if (!isset($_POST["contexte"])) {
         <header>
             <a href="./index.php" title="" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
-                <a href="" title="">Qui suis-je ?</a>
+                <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
                 <a href="./projets.php" title="">Mes projets</a>
                 <a href="" title="">Contact</a>
             </nav>

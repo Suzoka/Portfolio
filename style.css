@@ -179,7 +179,7 @@ header {
     z-index: 1000;
 }
 
-.fixe{
+.fixe {
     position: fixed;
 }
 
@@ -234,7 +234,7 @@ main {
     flex-grow: 1;
 }
 
-.flex  {
+.flex {
     display: flex;
     flex-direction: column;
 }
@@ -447,7 +447,7 @@ div.projet>* {
     margin: 0 auto;
 }
 
-div.projet>a{
+div.projet>a {
     grid-area: img;
 }
 
@@ -525,7 +525,7 @@ div.projet div.infoSup>* {
     box-shadow: inset 0.2rem 0.2rem 0.5rem #9b9b9b;
 }
 
-div.ariane{
+div.ariane {
     display: flex;
     max-width: 1500px;
     margin-top: 50px;
@@ -550,7 +550,7 @@ div.ariane{
     color: #545454;
 }
 
-.filtres{
+.filtres {
     display: flex;
     gap: 15px;
     max-width: 1500px;
@@ -684,7 +684,7 @@ div.ariane{
         margin: 0;
     }
 
-    div.ariane{
+    div.ariane {
         margin-left: 10vw;
     }
 }
@@ -766,4 +766,116 @@ div.ariane{
         left: 25px;
     }
 
+}
+
+
+
+
+
+
+
+.containerSlides {
+    width: 80%;
+    height: 550px;
+
+    margin: auto;
+    padding: 10px;
+
+
+    margin-top: 25px;
+}
+
+.containerSlides .cont {
+    max-width: 1300px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    min-width: 10px;
+    width: 100px;
+    height: 100%;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 10px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 3px 5px black;
+    opacity: .5;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    border-radius: 25px;
+}
+
+
+.active {
+    flex-grow: 1;
+    transition-duration: 1s;
+    opacity: 1;
+    padding: 0 10px;
+    padding-bottom: 10px
+}
+
+.nonActive {
+    flex-grow: 0;
+    opacity: .5;
+    transition-duration: 1s;
+
+}
+
+.active > * {
+    opacity: 1;
+    transition: 1s;
+}
+
+.nonActive > * {    
+    opacity: 0;
+    transition: 1s;
+}
+
+
+
+.slide:nth-of-type(1) {
+    background-image: url('./img/escalade.jpg');
+}
+
+.slide:nth-of-type(2) {
+    background-image: url('./img/plongee.jpg');
+}
+
+.slide:nth-of-type(3) {
+    background-image: url('./img/apnee.jpg');
+}
+
+.slide:nth-of-type(4) {
+    background-image: url('https://mcdn.wallpapersafari.com/medium/28/35/fslPOF.jpg');
+}
+
+.texte {
+    padding: 10px 15px 15px 15px;
+    background-color: #00000091;
+    margin: -10px;
+}
+
+.texte h1 {
+    margin: 0;
+}
+
+.texte p {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .slide {
+        width: 20px;
+    }
+
+    .active {
+        border-radius: 25px
+    }
 }

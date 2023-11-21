@@ -1,4 +1,4 @@
-<!-- Rename this file with your database's information and rename this file to database.php -->
+<!-- Edit this file with your database's informations and rename this file to "database.php" -->
 
 <?php
 $login = "root";
