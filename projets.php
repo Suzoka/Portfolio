@@ -39,7 +39,7 @@ if (!isset($_POST["contexte"])) {
             </nav>
         </header>
 
-        <main>
+        <main class="flex">
             <form class="filtres" action="" method="post">
                 <div class="filtre">
                     <label for="techno">Technologie : </label>
@@ -86,34 +86,36 @@ if (!isset($_POST["contexte"])) {
                 </div>
             </form>
 
-            <div class="timeline">
-                <?php
-                $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
-                foreach ($projets as $row) {
-                    ?>
-                    <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=
-                    <?= $row["id_projet"] ?>">
-                            <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
-                            <div class="text">
-                                <h3>
-                                    <?= $row["nom_projet"] ?>
-                                </h3>
-                                <p>
-                                    <?= $row["description_rapide"] ?>
-                                </p>
-                            </div>
-                            <div class="theme">
-                                <?php
-                                $technos = getTechnos($row["id_projet"]);
-                                foreach ($technos as $tech) { ?>
-                                    <p style="--color:#<?= $tech["couleur_techno"] ?>;" role="link" class="<?= $tech["id_techno"] ?>">
-                                        <?= $tech["nom_techno"] ?>
+            <div class="flexCenter">
+                <div class="timeline">
+                    <?php
+                    $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
+                    foreach ($projets as $row) {
+                        ?>
+                        <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=
+                        <?= $row["id_projet"] ?>">
+                                <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
+                                <div class="text">
+                                    <h3>
+                                        <?= $row["nom_projet"] ?>
+                                    </h3>
+                                    <p>
+                                        <?= $row["description_rapide"] ?>
                                     </p>
-                                <?php } ?>
-                            </div>
-                        </a>
-                    </div>
-                <?php } ?>
+                                </div>
+                                <div class="theme">
+                                    <?php
+                                    $technos = getTechnos($row["id_projet"]);
+                                    foreach ($technos as $tech) { ?>
+                                        <p style="--color:#<?= $tech["couleur_techno"] ?>;" role="link" class="<?= $tech["id_techno"] ?>">
+                                            <?= $tech["nom_techno"] ?>
+                                        </p>
+                                    <?php } ?>
+                                </div>
+                            </a>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </main>
 
