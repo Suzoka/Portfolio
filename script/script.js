@@ -2,40 +2,42 @@ function animation(anime) {
     anime.forEach(function (element) {
         element.addEventListener('click', function (e) {
             e.preventDefault();
-            const position = element.getBoundingClientRect();
+            if (e.target.localName != "p") {
+                const position = element.getBoundingClientRect();
 
-            const clone = element.cloneNode(true);
-            element.style.transition = 'none';
-            element.style.opacity = 0;
-
-
-            clone.style.top = position.top + "px";
-            clone.style.left = position.left + "px";
-            clone.style.position = "fixed";
-            clone.style.zIndex = 1000;
-            clone.style.scale = 1.03;
+                const clone = element.cloneNode(true);
+                element.style.transition = 'none';
+                element.style.opacity = 0;
 
 
-            element.parentNode.append(clone)
-            document.querySelector('body').style.overflow = "hidden";
+                clone.style.top = position.top + "px";
+                clone.style.left = position.left + "px";
+                clone.style.position = "fixed";
+                clone.style.zIndex = 1000;
+                clone.style.scale = 1.03;
 
-            setTimeout(function () {
-                clone.style.transition = "0.2s";
-                clone.style.scale = 0.75;
-            }, 10);
 
-            setTimeout(function () {
-                clone.style.transition = '0.5s';
-                clone.style.scale = 12;
+                element.parentNode.append(clone)
+                document.querySelector('body').style.overflow = "hidden";
+
                 setTimeout(function () {
-                    window.location.href = "./projet.php?id=" + element.id;
+                    clone.style.transition = "0.2s";
+                    clone.style.scale = 0.75;
+                }, 10);
+
+                setTimeout(function () {
+                    clone.style.transition = '0.5s';
+                    clone.style.scale = 12;
                     setTimeout(function () {
-                        clone.remove();
-                        element.removeAttribute('style');
-                        document.querySelector('body').style.overflow = "auto";
-                    }, 100);
-                }, 450);
-            }, 200);
+                        window.location.href = "./projet.php?id=" + element.id;
+                        setTimeout(function () {
+                            clone.remove();
+                            element.removeAttribute('style');
+                            document.querySelector('body').style.overflow = "auto";
+                        }, 100);
+                    }, 450);
+                }, 200);
+            }
         })
     });
 }
@@ -151,6 +153,26 @@ function refreshFiltres() {
     document.querySelectorAll('.filtre select').forEach(function (element) {
         element.addEventListener('change', function () {
             document.querySelector('.filtres').submit();
+        });
+    });
+}
+
+function addTechnosLinks() {
+    document.querySelectorAll('.theme p').forEach(function (element) {
+        element.addEventListener('click', function () {
+            const filtre = element.getAttribute('class');
+            let formulaire = document.createElement('form');
+            document.body.appendChild(formulaire);
+            formulaire.method = 'post';
+            formulaire.action = './projets.php';
+
+            let input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'techno';
+            input.value = filtre;
+            formulaire.appendChild(input);
+
+            formulaire.submit();
         });
     });
 }

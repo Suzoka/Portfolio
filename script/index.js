@@ -38,7 +38,7 @@ const slides = document.querySelectorAll('.lienProjet');
 
 animation(slides);
 slider(droite, gauche, sliderBox, slides);
-
+addTechnosLinks();
 
 const zoneTexteFaire = document.querySelector(".savoirFaire");
 const listeFaire = ["e développement.", "a plongée.", "e PHP.    ", "a photographie.", "e JavaScript.", "'escalade."];

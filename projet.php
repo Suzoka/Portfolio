@@ -33,7 +33,10 @@ if (isset($_GET["id"])) {
             <main>
                 <div class="ariane">
                     <a href="javascript:history.back()" class="lienVersProjet lienRetour">Retour</a>
-                    <p class="filAriane"><a href="./Accueil.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a href="./projet.php?id=<?= $projet["id_projet"]?>"><?= $projet["nom_projet"]?></a></p>
+                    <p class="filAriane"><a href="./Accueil.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a
+                            href="./projet.php?id=<?= $projet["id_projet"] ?>">
+                            <?= $projet["nom_projet"] ?>
+                        </a></p>
                 </div>
                 <div class="projet">
                     <h1>
@@ -45,7 +48,7 @@ if (isset($_GET["id"])) {
                         <?php
                         $technos = getTechnos($projet["id_projet"]);
                         foreach ($technos as $tech) { ?>
-                            <p style="--color:#<?= $tech["couleur_techno"] ?>;">
+                            <p style="--color:#<?= $tech["couleur_techno"] ?>;" role="link" class="<?= $tech["id_techno"] ?>">
                                 <?= $tech["nom_techno"] ?>
                             </p>
                         <?php } ?>
@@ -67,8 +70,7 @@ if (isset($_GET["id"])) {
                                 } ?>
                             </p>
                             <?php
-                        } 
-                        else {
+                        } else {
                             ?>
                             <p class="membres">Projet fait seul</p>
                             <?php
@@ -98,6 +100,9 @@ if (isset($_GET["id"])) {
                 </div>
             </footer>
         </div>
+
+        <script src="./script/script.js" defer></script>
+        <script src="./script/projet.js" defer></script>
     </body>
 
     </html>
