@@ -36,6 +36,14 @@ h1.title {
     right: 25px;
 }
 
+.bannerBox {
+    position: relative;
+    height: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 a.lienProjet {
     width: 400px;
     height: 250px;
@@ -172,7 +180,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 45px;
+    height: 60px;
     background-color: #161616cc;
     -webkit-backdrop-filter: saturate(1.8) blur(20px);
     backdrop-filter: saturate(1.8) blur(20px);
@@ -209,7 +217,7 @@ footer a:hover {
 }
 
 header img {
-    height: 40px;
+    height: 50px;
     border-radius: 50%;
     transition: 0.3s;
     -webkit-filter: invert(100%);
@@ -238,6 +246,7 @@ main {
 .flex {
     display: flex;
     flex-direction: column;
+    padding-top: 125px;
 }
 
 footer {
@@ -256,7 +265,7 @@ footer {
 
 h2.projet {
     padding-top: 25px;
-    padding-left: 15px;
+    padding-left: 100px;
     margin-bottom: -30px;
     z-index: -1;
 }
@@ -316,8 +325,7 @@ section.content {
     margin: 0 auto;
     max-width: 1000px;
     line-height: 1.5;
-    padding: 20px;
-    padding-bottom: 5px;
+    padding: 25px 20px 5px 20px;
 }
 
 .content br {
@@ -333,8 +341,7 @@ section.content {
 .content h2 {
     font-size: 2.5rem;
     margin-bottom: 0;
-    margin-top: 10px;
-    margin-left: -50px;
+    margin-top: 30px;
 }
 
 .bold {
@@ -344,7 +351,7 @@ section.content {
 .linkAlone {
     text-decoration: none;
     color: black;
-    margin: 25px auto -25px auto;
+    margin: 40px auto -10px auto;
     width: 250px;
     height: 50px;
     border-radius: 25px;
@@ -485,6 +492,8 @@ div.projet div.theme {
 
 div.projet div.theme>* {
     margin: 0;
+    font-size: 1.05rem;
+
 }
 
 div.projet div.infoAll {
@@ -539,7 +548,7 @@ div.ariane {
     display: flex;
     max-width: 1500px;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 125px;
 }
 
 .lienRetour {
@@ -548,7 +557,7 @@ div.ariane {
 
 .filAriane {
     margin: 0;
-    margin-left: 15px;
+    margin-left: 50px;
     align-self: center;
 }
 
@@ -588,6 +597,8 @@ div.ariane {
 
     margin: auto;
     padding: 10px;
+
+    margin-bottom: 20px;
 }
 
 .containerSlides .cont {
@@ -600,7 +611,7 @@ div.ariane {
 }
 
 .slide {
-    width: 100px;
+    width: 120px;
     height: 100%;
     justify-content: center;
     margin: 0 10px;
@@ -619,7 +630,7 @@ div.ariane {
 .slide h3 {
     font-size: 2rem;
     margin: 0;
-    margin-top: 7.5px;
+    margin-top: 7px;
 }
 
 .active {
@@ -675,6 +686,10 @@ div.ariane {
 
 .texte p {
     margin-bottom: 0;
+}
+
+.content h2.welcome {
+    margin-top: 10px;
 }
 
 @-webkit-keyframes blink {
@@ -753,6 +768,7 @@ div.ariane {
 
     .content h2 {
         margin-left: 15px;
+        margin-top: 15px;
     }
 }
 

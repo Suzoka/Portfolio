@@ -72,7 +72,7 @@ if (isset($_GET["id"])) {
                             <?php
                         } else {
                             ?>
-                            <p class="membres">Projet fait seul</p>
+                            <p class="membres">Projet individuel</p>
                             <?php
                         }
                         ?>
@@ -86,7 +86,7 @@ if (isset($_GET["id"])) {
                                 </p>
                             <?php } ?>
                             <?php if ($projet["url"] != NULL) { ?>
-                                <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le projet</a>
+                                <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le site</a>
                             <?php } ?>
                         </div>
                     </div>

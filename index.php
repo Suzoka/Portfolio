@@ -35,21 +35,23 @@
 
         <main>
             <div class="banner">
-                <h1 class="title">Morgan ZARKA<br>Développeur<br>fullstack</h1>
-                <div class="dynamique">
-                    <p>Je suis&nbsp;<span class="savoirEtre"></span></p>
-                    <p>J'aime l<span class="savoirFaire"></span></p>
+                <div class="bannerBox">
+                    <h1 class="title">Morgan ZARKA<br>Développeur<br>fullstack</h1>
+                    <div class="dynamique">
+                        <p>Je suis&nbsp;<span class="savoirEtre"></span></p>
+                        <p>J'aime l<span class="savoirFaire"></span></p>
+                    </div>
                 </div>
             </div>
             <section class="content">
-                <h2>Bienvenue sur mon portfolio !</h2>
+                <h2 class="welcome">Bienvenue sur mon portfolio !</h2>
                 <p>Je m'appel Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT MMI</span>. Dans cette filière polyvalente, j'ai choisis de suivre le parcours <span class="bold">"Développement Web et dispositifs intéractifs"</span>, dans l'optique de devenir développeur fullstack. Vous trouverez dans ce portfolio différents de mes projets, qu'ils soient
                     personnels ou scolaire. <br><br> Avec ce portfolio, vous avez un moyen de plonger dans ce que je
                     suis capable de faire, et j'espère sincèrement que cette exploration à travers mon univers
                     vous plaira !</p>   
                 <a href="./qui-suis-je.php" class="linkAlone">En savoir plus sur moi</a>
             </section>
-            <h2 class="projet">Quelques-uns de mes projets :</h2>
+            <h2 class="projet">Quelques-uns de mes projets</h2>
             <div class="hide">
                 <div class="flexbox">
                     <?php

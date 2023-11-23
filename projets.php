@@ -39,84 +39,85 @@ if (!isset($_POST["contexte"])) {
             </nav>
         </header>
 
-        <main class="flex">
-            <form class="filtres" action="" method="post">
-                <div class="filtre">
-                    <label for="techno">Technologie : </label>
-                    <select name="techno" id="techno">
-                        <option value="0">Toutes</option>
+        <main>
+            <div class="flex">
+                <form class="filtres" action="" method="post">
+                    <div class="filtre">
+                        <label for="techno">Technologie : </label>
+                        <select name="techno" id="techno">
+                            <option value="0">Toutes</option>
+                            <?php
+                            $techno = filtreTechno();
+                            foreach ($techno as $tech) {
+                                ?>
+                                <option value="<?= $tech["id_techno"] ?>" <?php
+                                if ($_POST["techno"] == $tech["id_techno"]) { ?> selected="selected" <?php } ?>>
+                                    <?= $tech["nom_techno"] ?>
+                                </option>
+                                <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="filtre">
+                        <label for="etat">Etat : </label>
+                        <select name="etat" id="etat">
+                            <option value="0">Tous</option>
+                            <option value="1" <?php
+                                if ($_POST["etat"] == 1) { ?> selected="selected" <?php } ?>>Terminé</option>
+                            <option value="2" <?php
+                                if ($_POST["etat"] == 2) { ?> selected="selected" <?php } ?>>En cours</option>
+                        </select>
+                    </div>
+                    <div class="filtre">
+                        <label for="contexte">Contexte : </label>
+                        <select name="contexte" id="contexte">
+                            <option value="0">Tous</option>
+                            <?php $contextes = filtreContexte();
+                            foreach ($contextes as $contexte) {
+                                ?>
+                                <option value="<?= str_replace("&nbsp;", "insec",$contexte["nom_contexte"]) ?>" <?php
+                                if ($_POST["contexte"] == str_replace("&nbsp;", "insec",$contexte["nom_contexte"])) { ?> selected="selected" <?php } ?>>
+                                    <?= ucfirst($contexte["nom_contexte"]) ?>
+                                </option>
+                                <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </form>
+                <div class="flexCenter">
+                    <div class="timeline">
                         <?php
-                        $techno = filtreTechno();
-                        foreach ($techno as $tech) {
+                        $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
+                        foreach ($projets as $row) {
                             ?>
-                            <option value="<?= $tech["id_techno"] ?>" <?php 
-                            if ($_POST["techno"] == $tech["id_techno"]) { ?> selected="selected" <?php } ?>>
-                                <?= $tech["nom_techno"] ?>
-                            </option>
-                            <?php
-                        }
-                        ?>
-                    </select>
-                </div>
-                <div class="filtre">
-                    <label for="etat">Etat : </label>
-                    <select name="etat" id="etat">
-                        <option value="0">Tous</option>
-                        <option value="1" <?php 
-                            if ($_POST["etat"] == 1) { ?> selected="selected" <?php } ?>>Terminé</option>
-                        <option value="2" <?php 
-                            if ($_POST["etat"] == 2) { ?> selected="selected" <?php } ?>>En cours</option>
-                    </select>
-                </div>
-                <div class="filtre">
-                    <label for="contexte">Contexte : </label>
-                    <select name="contexte" id="contexte">
-                        <option value="0">Tous</option>
-                        <?php $contextes = filtreContexte();
-                        foreach ($contextes as $contexte) {
-                            ?>
-                            <option value="<?= str_replace("&nbsp;", "insec",$contexte["nom_contexte"]) ?>" <?php 
-                            if ($_POST["contexte"] == str_replace("&nbsp;", "insec",$contexte["nom_contexte"])) { ?> selected="selected" <?php } ?>>
-                                <?= ucfirst($contexte["nom_contexte"]) ?>
-                            </option>
-                            <?php
-                        }
-                        ?>
-                    </select>
-                </div>
-            </form>
-
-            <div class="flexCenter">
-                <div class="timeline">
-                    <?php
-                    $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
-                    foreach ($projets as $row) {
-                        ?>
-                        <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=
-                        <?= $row["id_projet"] ?>">
-                                <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
-                                <div class="text">
-                                    <h3>
-                                        <?= $row["nom_projet"] ?>
-                                    </h3>
-                                    <p>
-                                        <?= $row["description_rapide"] ?>
-                                    </p>
-                                </div>
-                                <div class="theme">
-                                    <?php
-                                    $technos = getTechnos($row["id_projet"]);
-                                    foreach ($technos as $tech) { ?>
-                                        <p style="--color:#<?= $tech["couleur_techno"] ?>;" tabindex="0" role="link" class="<?= $tech["id_techno"] ?>">
-                                            <?= $tech["nom_techno"] ?>
+                            <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=
+                            <?= $row["id_projet"] ?>">
+                                    <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
+                                    <div class="text">
+                                        <h3>
+                                            <?= $row["nom_projet"] ?>
+                                        </h3>
+                                        <p>
+                                            <?= $row["description_rapide"] ?>
                                         </p>
-                                    <?php } ?>
-                                </div>
-                            </a>
-                        </div>
-                    <?php } ?>
+                                    </div>
+                                    <div class="theme">
+                                        <?php
+                                        $technos = getTechnos($row["id_projet"]);
+                                        foreach ($technos as $tech) { ?>
+                                            <p style="--color:#<?= $tech["couleur_techno"] ?>;" tabindex="0" role="link" class="<?= $tech["id_techno"] ?>">
+                                                <?= $tech["nom_techno"] ?>
+                                            </p>
+                                        <?php } ?>
+                                    </div>
+                                </a>
+                            </div>
+                        <?php } ?>
+                    </div>
                 </div>
-            </div>
+        </div>
         </main>
 
         <footer>
