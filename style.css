@@ -492,7 +492,8 @@ div.projet h1 {
 
 div.projet p.description {
     grid-area: texte;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 div.projet div.theme {
@@ -522,6 +523,7 @@ div.projet p.membres {
 
 div.projet div.infoSup {
     display: flex;
+    flex-wrap: wrap;
     justify-content: start;
     align-items: center;
     gap: 25px;
@@ -530,6 +532,10 @@ div.projet div.infoSup {
 div.projet div.infoSup>* {
     margin: 0;
     display: block;
+}
+
+.liens a:nth-child(2){
+    margin-left: 10px;
 }
 
 .lienVersProjet {

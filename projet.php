@@ -17,6 +17,7 @@ if (isset($_GET["id"])) {
             <?= $projet["nom_projet"] ?> | Morgan ZARKA
         </title>
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
     </head>
 
     <body>
@@ -85,9 +86,19 @@ if (isset($_GET["id"])) {
                                     <?= $projet["note_finale"] ?>/20
                                 </p>
                             <?php } ?>
-                            <?php if ($projet["url"] != NULL) { ?>
-                                <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le site</a>
-                            <?php } ?>
+                            <?php if ($projet["url"] != NULL || $projet["lien_github"] != NULL) { ?>
+                                <div class="liens">
+                                    <?php if ($projet["url"] != NULL) { ?>
+                                        <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le site</a>
+                                    <?php } ?>
+                                    <?php if ($projet["lien_github"] != NULL) { ?>
+                                        <a href="<?= $projet["lien_github"] ?>" class="lienVersProjet">Lien du GitHub</a>
+                                    <?php }
+                            } ?>
+
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
