@@ -65,12 +65,21 @@ a.lienProjet {
 }
 
 .text {
+    margin-top: -10px;
+    height: 110px;
     width: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text>*{
+    margin: 0;
 }
 
 .theme {
     margin: 0;
-    margin-top: -15px;
+    margin-top: 10px;
     font-size: 0.7rem;
     display: flex;
     justify-content: center;
@@ -90,6 +99,7 @@ a.lienProjet {
     border: solid 2px var(--color);
     box-shadow: 0 0 3px var(--color);
     z-index: 30;
+    margin: 0;
 }
 
 a.lienProjet:hover {
@@ -246,7 +256,7 @@ main {
 .flex {
     display: flex;
     flex-direction: column;
-    padding-top: 125px;
+    padding-top: 40px;
 }
 
 footer {
@@ -476,6 +486,7 @@ div.projet img {
 div.projet h1 {
     grid-area: titre;
     text-align: center;
+    align-self: flex-start;
     line-height: 1;
 }
 
@@ -732,6 +743,36 @@ div.ariane {
     }
 }
 
+@media screen and (max-width: 1250px) {
+    div.projet {
+        grid-template-columns: 25px 1fr 25px;
+        grid-template-rows: repeat(5, fit-content(100px));
+        grid-template-areas:
+            ". titre ."
+            ". img ."
+            ". pin ."
+            ". texte ."
+            ". infos .";
+        gap: 15px;
+        max-width: 550px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    div.projet img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.projet div.theme {
+        margin: 0;
+    }
+
+    div.ariane {
+        margin-left: 10vw;
+    }
+}
+
 @media screen and (max-width: 1200px) {
 
     .timeline {
@@ -790,34 +831,6 @@ div.ariane {
 
 
 @media screen and (max-width: 1025px) {
-    div.projet {
-        grid-template-columns: 25px 1fr 25px;
-        grid-template-rows: repeat(5, fit-content(100px));
-        grid-template-areas:
-            ". titre ."
-            ". img ."
-            ". pin ."
-            ". texte ."
-            ". infos .";
-        gap: 15px;
-        max-width: 550px;
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-
-    div.projet img {
-        width: 100%;
-        height: auto;
-    }
-
-    div.projet div.theme {
-        margin: 0;
-    }
-
-    div.ariane {
-        margin-left: 10vw;
-    }
-
     .slide {
         width: 30px;
     }
@@ -889,7 +902,16 @@ div.ariane {
     a.lienProjet {
         flex-direction: column;
         width: 300px;
-        height: 450px;
+        height: 400px;
+    }
+
+    .text {
+        width: 80%;
+        margin-top: 5px;
+    }
+
+    .theme {
+        margin-top: 10px;
     }
 
     .sliderDroite {

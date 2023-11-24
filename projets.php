@@ -92,8 +92,7 @@ if (!isset($_POST["contexte"])) {
                         $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
                         foreach ($projets as $row) {
                             ?>
-                            <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=
-                            <?= $row["id_projet"] ?>">
+                            <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=<?= $row["id_projet"] ?>">
                                     <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
                                     <div class="text">
                                         <h3>
