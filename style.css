@@ -515,7 +515,7 @@ div.projet div.infoAll {
     display: flex;
     flex-direction: column;
     align-self: end;
-    gap: 15px;
+    gap: 25px;
     width: 100%;
 }
 
@@ -565,9 +565,10 @@ div.projet div.infoSup>* {
 
 div.ariane {
     display: flex;
-    max-width: 1500px;
+    max-width: 1660px;
     margin-top: 50px;
     margin-left: 125px;
+    gap: 40px;
 }
 
 .lienRetour {
@@ -576,8 +577,10 @@ div.ariane {
 
 .filAriane {
     margin: 0;
-    margin-left: 50px;
+    margin-left: 10px;
     align-self: center;
+    text-align: end;
+    margin-right: 25px;
 }
 
 .filAriane a {
@@ -612,9 +615,6 @@ div.ariane {
     background-size: 13px;
     padding-right: 20px;
 }
-
-
-
 
 .containerSlides {
     width: 80%;
@@ -717,6 +717,16 @@ div.ariane {
     margin-top: 10px;
 }
 
+.date {
+    margin: 0 125px 0 auto;
+    align-self: center;
+}
+
+.notDate {
+    display: flex;
+    gap: 40px;
+}
+
 @-webkit-keyframes blink {
 
     0%,
@@ -784,6 +794,10 @@ div.ariane {
 
     div.ariane {
         margin-left: 10vw;
+    }
+
+    .date {
+        margin-right: 25%;
     }
 }
 
@@ -870,6 +884,14 @@ div.ariane {
     div.projet p.description {
         font-size: 1.1rem;
     }
+
+    .date {
+        margin-right: 15%;
+    }
+
+    .ariane {
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width: 730px) {
@@ -902,6 +924,12 @@ div.ariane {
         height: 75px;
         margin: 10px 0;
         padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    div.projet {
+        margin-top: 15px;
     }
 }
 
@@ -942,6 +970,10 @@ div.ariane {
     .container:nth-child(odd):after,
     .container:nth-child(even):after {
         left: -15px;
+    }
+
+    .date {
+        margin-right: 7.5%;
     }
 }
 

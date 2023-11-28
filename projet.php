@@ -33,11 +33,22 @@ if (isset($_GET["id"])) {
 
             <main>
                 <div class="ariane">
-                    <a href="javascript:history.back()" class="lienVersProjet lienRetour">Retour</a>
-                    <p class="filAriane"><a href="./index.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a
-                            href="./projet.php?id=<?= $projet["id_projet"] ?>">
-                            <?= $projet["nom_projet"] ?>
-                        </a></p>
+                    <div class="notDate">
+                        <a href="javascript:history.back()" class="lienVersProjet lienRetour">Retour</a>
+                        <p class="filAriane"><a href="./index.php">Accueil</a> > <a href="./projets.php">Projets</a> > <a
+                                href="./projet.php?id=<?= $projet["id_projet"] ?>">
+                                <?= $projet["nom_projet"] ?>
+                            </a></p>
+                    </div>
+                    <p class="date">Du <span class="bold">
+                            <?php echo (date('d/m/Y', strtotime($projet["date_debut"])));
+                            if ($projet["date_fin"] == null) {
+                                echo "</span> à aujourd'hui</span>";
+                            } else {
+                                echo "</span> au <span class=\"bold\">" . date('d/m/Y', strtotime($projet["date_fin"])) . "</span>";
+                            }
+                            ?>
+                    </p>
                 </div>
                 <div class="projet">
                     <h1>
@@ -95,9 +106,6 @@ if (isset($_GET["id"])) {
                                         <a href="<?= $projet["lien_github"] ?>" class="lienVersProjet">Lien du GitHub</a>
                                     <?php }
                             } ?>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -117,6 +125,7 @@ if (isset($_GET["id"])) {
     </body>
 
     </html>
-<?php } else {
+    <?php
+} else {
     header("Location: ./projets.php");
 } ?>
