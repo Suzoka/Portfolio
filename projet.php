@@ -100,10 +100,10 @@ if (isset($_GET["id"])) {
                             <?php if ($projet["url"] != NULL || $projet["lien_github"] != NULL) { ?>
                                 <div class="liens">
                                     <?php if ($projet["url"] != NULL) { ?>
-                                        <a href="<?= $projet["url"] ?>" class="lienVersProjet">Lien vers le site</a>
+                                        <a href="<?= $projet["url"] ?>" class="lienVersProjet" target="_blank">Lien vers le projet</a>
                                     <?php } ?>
                                     <?php if ($projet["lien_github"] != NULL) { ?>
-                                        <a href="<?= $projet["lien_github"] ?>" class="lienVersProjet">Lien du GitHub</a>
+                                        <a href="<?= $projet["lien_github"] ?>" class="lienVersProjet" target="_blank">Lien du GitHub</a>
                                     <?php }
                             } ?>
                             </div>
