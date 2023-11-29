@@ -34,8 +34,8 @@ if (!isset($_POST["contexte"])) {
             <a href="./index.php" title="" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
                 <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
-                <a href="./projets.php" title="">Mes projets</a>
-                <a href="" title="">Contact</a>
+                <a href="./projets.php" title="Voir mes projets">Mes projets</a>
+                <a href="./contacts.php" title="">Contact</a>
             </nav>
         </header>
 
@@ -51,7 +51,7 @@ if (!isset($_POST["contexte"])) {
                             foreach ($techno as $tech) {
                                 ?>
                                 <option value="<?= $tech["id_techno"] ?>" <?php
-                                if ($_POST["techno"] == $tech["id_techno"]) { ?> selected="selected" <?php } ?>>
+                                  if ($_POST["techno"] == $tech["id_techno"]) { ?> selected="selected" <?php } ?>>
                                     <?= $tech["nom_techno"] ?>
                                 </option>
                                 <?php
@@ -63,10 +63,14 @@ if (!isset($_POST["contexte"])) {
                         <label for="etat">Etat : </label>
                         <select name="etat" id="etat">
                             <option value="0">Tous</option>
-                            <option value="1" <?php
-                                if ($_POST["etat"] == 1) { ?> selected="selected" <?php } ?>>Terminé</option>
-                            <option value="2" <?php
-                                if ($_POST["etat"] == 2) { ?> selected="selected" <?php } ?>>En cours</option>
+                            <option value="1" <?php if ($_POST["etat"] == 1) {
+                                echo ("selected=\"selected\"");
+                            } ?>>Terminé
+                            </option>
+                            <option value="2" <?php if ($_POST["etat"] == 2) {
+                                echo ("selected=\"selected\"");
+                            } ?>>En
+                                cours</option>
                         </select>
                     </div>
                     <div class="filtre">
@@ -76,8 +80,9 @@ if (!isset($_POST["contexte"])) {
                             <?php $contextes = filtreContexte();
                             foreach ($contextes as $contexte) {
                                 ?>
-                                <option value="<?= str_replace("&nbsp;", "insec",$contexte["nom_contexte"]) ?>" <?php
-                                if ($_POST["contexte"] == str_replace("&nbsp;", "insec",$contexte["nom_contexte"])) { ?> selected="selected" <?php } ?>>
+                                <option value="<?= str_replace("&nbsp;", "insec", $contexte["nom_contexte"]) ?>" <?php
+                                   if ($_POST["contexte"] == str_replace("&nbsp;", "insec", $contexte["nom_contexte"])) { ?>
+                                        selected="selected" <?php } ?>>
                                     <?= ucfirst($contexte["nom_contexte"]) ?>
                                 </option>
                                 <?php
@@ -92,7 +97,8 @@ if (!isset($_POST["contexte"])) {
                         $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
                         foreach ($projets as $row) {
                             ?>
-                            <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>" href="./projet.php?id=<?= $row["id_projet"] ?>">
+                            <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>"
+                                    href="./projet.php?id=<?= $row["id_projet"] ?>">
                                     <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
                                     <div class="text">
                                         <h3>
@@ -106,7 +112,8 @@ if (!isset($_POST["contexte"])) {
                                         <?php
                                         $technos = getTechnos($row["id_projet"]);
                                         foreach ($technos as $tech) { ?>
-                                            <p style="--color:#<?= $tech["couleur_techno"] ?>;" tabindex="0" role="link" class="<?= $tech["id_techno"] ?>">
+                                            <p style="--color:#<?= $tech["couleur_techno"] ?>;" tabindex="0" role="link"
+                                                class="<?= $tech["id_techno"] ?>">
                                                 <?= $tech["nom_techno"] ?>
                                             </p>
                                         <?php } ?>
@@ -116,13 +123,16 @@ if (!isset($_POST["contexte"])) {
                         <?php } ?>
                     </div>
                 </div>
-        </div>
+            </div>
         </main>
 
         <footer>
             <div class="lien">
                 <a href="" title="">Mentions légales</a>
                 <a href="" title="">Plan du site</a>
+                <div class="reseaux"><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
+                            src="./img/linkedin.png" alt="Profil LinkedIn"></a><a href="https://github.com/Suzoka"
+                        target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
             </div>
         </footer>
 

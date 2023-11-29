@@ -23,8 +23,8 @@
       <a href="./index.php" title="Accueil" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
       <nav>
         <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
-        <a href="./projets.php" title="Mes projets">Mes projets</a>
-        <a href="" title="">Contact</a>
+        <a href="./projets.php" title="Voir mes projets">Mes projets</a>
+        <a href="./contacts.php" title="">Contact</a>
       </nav>
     </header>
 
@@ -32,56 +32,67 @@
       <section class="content">
         <h1>Qui suis-je ?</h1>
         <h2>Un peu plus sur moi</h2>
-        <p>Étudiant en <span class="bold">BUT MMI</span> (<span class="bold">Métiers du multimédia et de l'internet</span>) aux <span class="bold">IUT de Marne la vallée</span> (<span class="bold">Université Gustave Eiffel</span>). Dans cette formation polyvalente, j'y apprend le développement web, la création numérique, ainsi que la communication et la gestion de projet. <br><br> Passionné par le domaine de l'informatique depuis la classe de 5ème, je me suis naturellement orienté vers un <span class="bold">BAC STI2D</span> spécialité <span class="bold">SIN</span> (<span class="bold">Systèmes d'Information et Numérique</span>), au sein du lycée Martin Luther King. Durant ces années, mon envie de travailler dans la programation s'est confirmée, et c'est ainsi que je suis arrivé en MMI, en choisissant le parcours "<span class="bold">Développement Web et dispositifs intéractifs</span>".
-         </p>
+        <p>Étudiant en <span class="bold">BUT MMI</span> (<span class="bold">Métiers du multimédia et de
+            l'internet</span>) aux <span class="bold">IUT de Marne la vallée</span> (<span class="bold">Université
+            Gustave Eiffel</span>). Dans cette formation polyvalente, j'y apprend le développement web, la création
+          numérique, ainsi que la communication et la gestion de projet. <br><br> Passionné par le domaine de
+          l'informatique depuis la classe de 5ème, je me suis naturellement orienté vers un <span class="bold">BAC
+            STI2D</span> spécialité <span class="bold">SIN</span> (<span class="bold">Systèmes d'Information et
+            Numérique</span>), au sein du lycée Martin Luther King. Durant ces années, mon envie de travailler dans la
+          programation s'est confirmée, et c'est ainsi que je suis arrivé en MMI, en choisissant le parcours "<span
+            class="bold">Développement Web et dispositifs intéractifs</span>".
+        </p>
         <h2>Mes passions</h2>
-        </section>
-        <div class="containerSlides">
-          <div class="cont">
-            <div class="slide slide1 active ">
-              <div class="texte">
-                <h3>L'escalade</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                  reprehenderit
-                </p>
-              </div>
+      </section>
+      <div class="containerSlides">
+        <div class="cont">
+          <div class="slide slide1 active ">
+            <div class="texte">
+              <h3>L'escalade</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                reprehenderit
+              </p>
             </div>
-            <div class="slide slide2 nonActive">
-              <div class="texte">
-                <h3>La plongée</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                  reprehenderit
-                </p>
-              </div>
+          </div>
+          <div class="slide slide2 nonActive">
+            <div class="texte">
+              <h3>La plongée</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                reprehenderit
+              </p>
             </div>
-            <div class="slide slide3 nonActive">
-              <div class="texte">
-                <h3>L'apnée</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                  reprehenderit
-                </p>
-              </div>
+          </div>
+          <div class="slide slide3 nonActive">
+            <div class="texte">
+              <h3>L'apnée</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                reprehenderit
+              </p>
             </div>
-            <div class="slide slide4 nonActive">
-              <div class="texte">
-                <h3>La photographie</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                  autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                  reprehenderit
-                </p>
-              </div>
+          </div>
+          <div class="slide slide4 nonActive">
+            <div class="texte">
+              <h3>La photographie</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
+                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
+                reprehenderit
+              </p>
             </div>
           </div>
         </div>
+      </div>
     </main>
 
     <footer>
       <div class="lien">
         <a href="" title="">Mentions légales</a>
         <a href="" title="">Plan du site</a>
+        <div class="reseaux"><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
+              src="./img/linkedin.png" alt="Profil LinkedIn"></a><a href="https://github.com/Suzoka"
+            target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
       </div>
     </footer>
 

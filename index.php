@@ -1,4 +1,6 @@
-<?php include './script/script.php'; ?>
+<?php
+include './script/script.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,8 +30,8 @@
             <a href="./index.php" title="Accueil" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
                 <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
-                <a href="./projets.php" title="Mes projets">Mes projets</a>
-                <a href="" title="">Contact</a>
+                <a href="./projets.php" title="Voir mes projets">Mes projets</a>
+                <a href="./contacts.php" title="">Contact</a>
             </nav>
         </header>
 
@@ -45,10 +47,13 @@
             </div>
             <section class="content">
                 <h2 class="welcome">Bienvenue sur mon portfolio !</h2>
-                <p>Je m'appel Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT MMI</span>. Dans cette filière polyvalente, j'ai choisis de suivre le parcours <span class="bold">"Développement Web et dispositifs intéractifs"</span>, dans l'optique de devenir développeur fullstack. Vous trouverez dans ce portfolio différents de mes projets, qu'ils soient
+                <p>Je m'appel Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT
+                        MMI</span>. Dans cette filière polyvalente, j'ai choisis de suivre le parcours <span
+                        class="bold">"Développement Web et dispositifs intéractifs"</span>, dans l'optique de devenir
+                    développeur fullstack. Vous trouverez dans ce portfolio différents de mes projets, qu'ils soient
                     personnels ou scolaire. <br><br> Avec ce portfolio, vous avez un moyen de plonger dans ce que je
                     suis capable de faire, et j'espère sincèrement que cette exploration à travers mon univers
-                    vous plaira !</p>   
+                    vous plaira !</p>
                 <a href="./qui-suis-je.php" class="linkAlone">En savoir plus sur moi</a>
             </section>
             <h2 class="projet">Quelques-uns de mes projets</h2>
@@ -90,7 +95,9 @@
             <div class="lien">
                 <a href="" title="">Mentions légales</a>
                 <a href="" title="">Plan du site</a>
-                <div class="reseaux"><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img src="./img/linkedin.png" alt="Profil LinkedIn"></a><a href="https://github.com/Suzoka" target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
+                <div class="reseaux"><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
+                            src="./img/linkedin.png" alt="Profil LinkedIn"></a><a href="https://github.com/Suzoka"
+                        target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
             </div>
         </footer>
 

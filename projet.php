@@ -26,8 +26,8 @@ if (isset($_GET["id"])) {
                 <a href="./index.php" title="" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
                 <nav>
                     <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
-                    <a href="./projets.php" title="">Mes projets</a>
-                    <a href="" title="">Contact</a>
+                    <a href="./projets.php" title="Voir mes projets">Mes projets</a>
+                    <a href="./contacts.php" title="">Contact</a>
                 </nav>
             </header>
 
@@ -100,10 +100,12 @@ if (isset($_GET["id"])) {
                             <?php if ($projet["url"] != NULL || $projet["lien_github"] != NULL) { ?>
                                 <div class="liens">
                                     <?php if ($projet["url"] != NULL) { ?>
-                                        <a href="<?= $projet["url"] ?>" class="lienVersProjet" target="_blank">Lien vers le projet</a>
+                                        <a href="<?= $projet["url"] ?>" class="lienVersProjet" target="_blank">Lien vers le
+                                            projet</a>
                                     <?php } ?>
                                     <?php if ($projet["lien_github"] != NULL) { ?>
-                                        <a href="<?= $projet["lien_github"] ?>" class="lienVersProjet" target="_blank">Lien du GitHub</a>
+                                        <a href="<?= $projet["lien_github"] ?>" class="lienVersProjet" target="_blank">Lien du
+                                            GitHub</a>
                                     <?php }
                             } ?>
                             </div>
@@ -116,6 +118,9 @@ if (isset($_GET["id"])) {
                 <div class="lien">
                     <a href="" title="">Mentions légales</a>
                     <a href="" title="">Plan du site</a>
+                    <div class="reseaux"><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
+                                src="./img/linkedin.png" alt="Profil LinkedIn"></a><a href="https://github.com/Suzoka"
+                            target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
                 </div>
             </footer>
         </div>

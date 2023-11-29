@@ -605,7 +605,7 @@ div.ariane {
 }
 
 .filtre {
-    width: 230px;
+    width: 240px;
     text-align: center;
 }
 
@@ -616,9 +616,10 @@ div.ariane {
     box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
     border: none;
     appearance: none;
-    background: url(./img/fleche.svg) no-repeat right 20% center ;
+    background: url(./img/fleche.svg) no-repeat right 10% center ;
     background-size: 13px;
     padding-right: 20px;
+    width: 125px;
 }
 
 .containerSlides {
@@ -753,6 +754,27 @@ div.ariane {
 
 .reseaux img{
     height: 30px;
+}
+
+.centre {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.contacts {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.listContacts {
+    width: 50%;
 }
 
 @-webkit-keyframes blink {
@@ -929,7 +951,7 @@ div.ariane {
 }
 
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 750px) {
     form.filtres{
         flex-direction: column;
         gap: 20px;
