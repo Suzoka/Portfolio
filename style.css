@@ -498,8 +498,8 @@ div.projet h1 {
 
 div.projet p.description {
     grid-area: texte;
-    font-size: 1.2rem;
-    line-height: 1.4;
+    font-size: 1.1rem;
+    line-height: 1.3;
 }
 
 div.projet div.theme {
@@ -519,7 +519,7 @@ div.projet div.infoAll {
     display: flex;
     flex-direction: column;
     align-self: end;
-    gap: 25px;
+    gap: 15px;
     width: 100%;
 }
 
@@ -532,7 +532,7 @@ div.projet div.infoSup {
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 div.projet div.infoSup>* {
@@ -929,10 +929,6 @@ div.ariane {
 
     .banner {
         height: 370px;
-    }
-
-    div.projet p.description {
-        font-size: 1.1rem;
     }
 
     .date {
