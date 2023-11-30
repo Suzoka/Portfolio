@@ -40,6 +40,7 @@ if (!isset($_POST["contexte"])) {
         </header>
 
         <main>
+            <h1 class="centre">Mes projets</h1>
             <div class="flex">
                 <form class="filtres" action="" method="post">
                     <div class="filtre">
@@ -101,9 +102,9 @@ if (!isset($_POST["contexte"])) {
                                     href="./projet.php?id=<?= $row["id_projet"] ?>">
                                     <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
                                     <div class="text">
-                                        <h3>
+                                        <h2>
                                             <?= $row["nom_projet"] ?>
-                                        </h3>
+                                        </h2>
                                         <p>
                                             <?= $row["description_rapide"] ?>
                                         </p>

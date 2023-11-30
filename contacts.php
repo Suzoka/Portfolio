@@ -26,15 +26,22 @@
             </nav>
         </header>
         <main>
-        <h1 class="centre">Me contacter</h1>
+            <h1 class="centre">Me contacter</h1>
+            <!-- <h2>S'il vous venais à l'idée de vouloir complimenter ma moustache</h2> -->
             <div class="contacts">
                 <img src="./img/devMod.jpg" alt="" width="50%">
                 <div class="listContacts">
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>+33 6 74 11 13 62</li>
+                        <li>morgan.zarka@edu.univ-eiffel.fr</li>
+                        <div class="reseauxContact">
+                            <li><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
+                                        src="./img/linkedin.png" alt="Profil LinkedIn" width="40px"></a></li>
+                            <li><a href="https://github.com/Suzoka" target="_blank"><img src="./img/github.png"
+                                        alt="Profil GitHub" width="40px"></a></li>
+                            <li><a href="./img/CVMorganZARKA.pdf" class="lienVersProjet lienCV" target="_blank">Mon
+                                    CV</a></li>
+                        </div>
                     </ul>
                 </div>
             </div>
