@@ -56,25 +56,25 @@ function slider(droite, gauche, sliderBox, slides) {
     })
 
     function decaleGauche() {
-        gauche.style.display = "block";
+        gauche.style.visibility = "visible";
         sliderBox.style.left = "-" + ((position) * 425) - 25 * (position - 1) + "px";
         if (((window.window.innerWidth / 460) % 1) >= 0.9 || ((window.window.innerWidth / 460) % 1) <= 0.25) {
             if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
-                droite.style.display = "none";
+                droite.style.visibility = "hidden";
             }
         }
 
         else if (((window.window.innerWidth / 460) % 1) < 0.9 && ((window.window.innerWidth / 460) % 1) >= 0.5) {
             if (position == slides.length - Math.trunc(window.window.innerWidth / 460) - 1) {
                 sliderBox.style.left = "-" + ((position) * 425) - 25 * (position - 1) - 150 + "px";
-                droite.style.display = "none";
+                droite.style.visibility = "hidden";
             }
         }
 
         else if (((window.window.innerWidth / 460) % 1) > 0.25 && ((window.window.innerWidth / 460) % 1) < 0.5) {
             if (position == slides.length - Math.trunc(window.window.innerWidth / 460)) {
                 sliderBox.style.left = "-" + ((position) * 425) - 25 * (position - 1) + 160 + "px";
-                droite.style.display = "none";
+                droite.style.visibility = "hidden";
             }
         }
 
@@ -82,9 +82,9 @@ function slider(droite, gauche, sliderBox, slides) {
 
     function decaleDroite() {
         if (position == 0) {
-            gauche.style.display = "none";
+            gauche.style.visibility = "hidden";
         }
-        droite.style.display = "block";
+        droite.style.visibility = "visible";
         sliderBox.style.left = "-" + ((position) * 425) - 25 * (position - 1) + "px";
     }
 }

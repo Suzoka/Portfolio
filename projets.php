@@ -82,7 +82,7 @@ if (!isset($_POST["contexte"])) {
                             foreach ($contextes as $contexte) {
                                 ?>
                                 <option value="<?= str_replace("&nbsp;", "insec", $contexte["nom_contexte"]) ?>" <?php
-                                   if ($_POST["contexte"] == str_replace("&nbsp;", "insec", $contexte["nom_contexte"])) { ?>
+                                    if ($_POST["contexte"] == str_replace("&nbsp;", "insec", $contexte["nom_contexte"])) { ?>
                                         selected="selected" <?php } ?>>
                                     <?= ucfirst($contexte["nom_contexte"]) ?>
                                 </option>
@@ -98,7 +98,8 @@ if (!isset($_POST["contexte"])) {
                         $projets = getProjets($_POST["techno"], $_POST["etat"], $_POST["contexte"]);
                         foreach ($projets as $row) {
                             ?>
-                            <div class="container"> <a class="lienProjet" id="<?= $row["id_projet"] ?>"
+                            <div class="container">
+                                <a class="lienProjet" id="<?= $row["id_projet"] ?>"
                                     href="./projet.php?id=<?= $row["id_projet"] ?>">
                                     <img src="./img/<?= $row["url_logo"] ?>" alt="" width="130px" class="logo">
                                     <div class="text">
@@ -119,6 +120,7 @@ if (!isset($_POST["contexte"])) {
                                             </p>
                                         <?php } ?>
                                     </div>
+                                    <p class="lienVersProjet">En savoir plus</p>
                                 </a>
                             </div>
                         <?php } ?>

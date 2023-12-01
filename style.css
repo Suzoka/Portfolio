@@ -46,7 +46,7 @@ h1.title {
 
 a.lienProjet {
     width: 400px;
-    height: 250px;
+    height: 300px;
     padding: 20px 25px;
     background-color: #e0e0e0;
     border-radius: 50px;
@@ -162,26 +162,32 @@ div.hide {
 .sliderDroite {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
+    rotate: -90deg;
     right: 25px;
     transition: 0.3s;
     width: 80px;
+    animation: arrow 3s infinite;
+    z-index: 1000;
+    margin-top: -25px;
 }
 
 .sliderGauche {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
+    rotate: 90deg;
     left: 25px;
     transition: 0.3s;
-    display: none;
     width: 80px;
+    animation: arrow 3s infinite;
+    z-index: 1000;
+    margin-top: -25px;
+    visibility: hidden;
 }
 
 .sliderDroite:hover,
 .sliderGauche:hover {
     cursor: pointer;
-    scale: 1.1;
+    scale: 1.2;
 }
 
 header {
@@ -616,7 +622,9 @@ div.ariane {
     border-radius: 20px;
     box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
     border: none;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     background: url(./img/fleche.svg) no-repeat right 10% center ;
     background-size: 13px;
     padding-right: 20px;
@@ -741,16 +749,19 @@ div.ariane {
 }
 
 .reseaux a{
-    filter: saturate(0) invert(0.55) brightness(1.7) opacity(0.8);
+    -webkit-filter: saturate(0) invert(0.55) brightness(1.7) opacity(0.8);
+            filter: saturate(0) invert(0.55) brightness(1.7) opacity(0.8);
     transition: 0.5s;
 }
 
 .reseaux a:hover {
-    filter: saturate(1) invert(0) brightness(1.4) opacity(1);
+    -webkit-filter: saturate(1) invert(0) brightness(1.4) opacity(1);
+            filter: saturate(1) invert(0) brightness(1.4) opacity(1);
 }
 
 .reseaux a:nth-of-type(2):hover {
-    filter: saturate(0) invert(0.55) brightness(5) opacity(1);
+    -webkit-filter: saturate(0) invert(0.55) brightness(5) opacity(1);
+            filter: saturate(0) invert(0.55) brightness(5) opacity(1);
 }
 
 .reseaux img{
@@ -788,8 +799,12 @@ div.ariane {
     gap: 15px;
     height: 100%;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 20px;
+}
+
+.listContacts a {
+    color: black;
 }
 
 .reseauxContact{
@@ -812,8 +827,14 @@ div.ariane {
     margin-top: 25px;
 }
 
-@-webkit-keyframes blink {
+.lienProjet .lienVersProjet{
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    font-size: 0.8rem;
+}
 
+@-webkit-keyframes blink {
     0%,
     100% {
         opacity: 0;
@@ -825,7 +846,6 @@ div.ariane {
 }
 
 @keyframes blink {
-
     0%,
     100% {
         opacity: 0;
@@ -833,6 +853,28 @@ div.ariane {
 
     50% {
         opacity: 1;
+    }
+}
+
+@keyframes arrow{
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -1063,7 +1105,9 @@ div.ariane {
     a.lienProjet {
         flex-direction: column;
         width: 300px;
-        height: 450px;
+        height: 500px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .text {

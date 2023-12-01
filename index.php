@@ -83,6 +83,7 @@ include './script/script.php';
                                     </p>
                                 <?php } ?>
                             </div>
+                            <p class="lienVersProjet">En savoir plus</p>
                         </a>
                     <?php } ?>
                 </div>
