@@ -21,7 +21,7 @@
             <a href="./index.php" title="Accueil" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
             <nav>
                 <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
-                <a href="./projets.php" title="Voir mes projets">Mes projets</a>
+                <a href="./projets.php" title="Voir tous mes projets">Mes projets</a>
                 <a href="./contacts.php" title="">Contact</a>
             </nav>
         </header>
@@ -32,8 +32,8 @@
                 <img src="./img/devMod.jpg" alt="" width="50%">
                 <div class="listContacts">
                     <ul>
-                        <li>+33 6 74 11 13 62</li>
-                        <li>morgan.zarka@edu.univ-eiffel.fr</li>
+                        <li><a href="tel:+33674111362">+33 6 74 11 13 62</a></li>
+                        <li><a href="mailto:morgan.zarka@edu.univ-eiffel.fr">morgan.zarka@edu.univ-eiffel.fr</a></li>
                         <div class="reseauxContact">
                             <li><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
                                         src="./img/linkedin.png" alt="Profil LinkedIn" width="40px"></a></li>
@@ -45,6 +45,18 @@
                     </ul>
                 </div>
             </div>
+            <h2 class="centre">Formulaire de contact</h2>
+            <form action="./script/mail.php" method="POST" class="contacts">
+                <div>
+                    <label for="nom"></label><input type="text" name="nom" id="nom">
+                    <label for="prenom"></label><input type="text" name="prenom" id="prenom">
+                    <label for="mail"></label><input type="text" name="mail" id="mail">
+                </div>
+                <div>
+                    <label for="objet"></label><input type="text" name="objet" id="objet">
+                    <label for="message"></label><textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
         </main>
 
         <footer>

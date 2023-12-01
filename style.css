@@ -166,7 +166,8 @@ div.hide {
     right: 25px;
     transition: 0.3s;
     width: 80px;
-    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+            animation: arrow 3s infinite;
     z-index: 1000;
     margin-top: -25px;
 }
@@ -178,7 +179,8 @@ div.hide {
     left: 25px;
     transition: 0.3s;
     width: 80px;
-    animation: arrow 3s infinite;
+    -webkit-animation: arrow 3s infinite;
+            animation: arrow 3s infinite;
     z-index: 1000;
     margin-top: -25px;
     visibility: hidden;
@@ -768,11 +770,6 @@ div.ariane {
     height: 30px;
 }
 
-.centre {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
 .contacts {
     display: flex;
     gap: 10px;
@@ -822,6 +819,15 @@ div.ariane {
 
 .centre {
     text-align: center;
+}
+
+h2.centre {
+    font-size: 1.75rem;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+h1.centre {
     font-size: 2.5rem;
     margin-bottom: 0;
     margin-top: 25px;
@@ -853,6 +859,28 @@ div.ariane {
 
     50% {
         opacity: 1;
+    }
+}
+
+@-webkit-keyframes arrow{
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
 

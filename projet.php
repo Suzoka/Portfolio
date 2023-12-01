@@ -31,7 +31,7 @@ if (isset($_GET["id"])) {
                 <a href="./index.php" title="" class="logo"><img src="./img/filigrane.svg" alt="Accueil"></a>
                 <nav>
                     <a href="./qui-suis-je.php" title="">Qui suis-je ?</a>
-                    <a href="./projets.php" title="Voir mes projets">Mes projets</a>
+                    <a href="./projets.php" title="Voir tous mes projets">Mes projets</a>
                     <a href="./contacts.php" title="">Contact</a>
                 </nav>
             </header>
