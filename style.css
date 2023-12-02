@@ -903,6 +903,31 @@ input[type="submit"] {
     left: 0;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 25px;
+}
+
+.rouge {
+    color: red;
+}
+
+button.annuler {
+    rotate: 90deg;
+    background-color: transparent;
+    border: none;
+    filter: invert(1);
+    margin-top: 10px;
+    transition: 0.3s;
+    padding: 0;
+}
+
+button.annuler:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+button.valider {
+    cursor: pointer;
+    box-shadow: none;
 }
 
 @-webkit-keyframes blink {

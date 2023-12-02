@@ -47,11 +47,11 @@
             </div>
             <h2 class="centre">Formulaire de contact</h2>
             <form action="./script/mail.php" method="POST" class="contactParMail">
-                    <label for="nom">Nom* : </label><input type="text" name="nom" id="nom" required><br>
-                    <label for="prenom">Prénom* : </label><input type="text" name="prenom" id="prenom" required><br>
-                    <label for="mail">Email* : </label><input type="email" name="mail" id="mail" required><br>
+                    <label for="nom">Nom<span class="rouge">*</span> : </label><input type="text" name="nom" id="nom" required autocomplete="family-name"><br>
+                    <label for="prenom">Prénom<span class="rouge">*</span> : </label><input type="text" name="prenom" id="prenom" required autocomplete="given-name"><br>
+                    <label for="mail">Email<span class="rouge">*</span> : </label><input type="email" name="mail" id="mail" required autocomplete="email"><br>
                     <label for="objet">Objet : </label><textarea name="objet" id="objet" cols="30" rows="2"></textarea><br>
-                    <label for="message">Message* : </label><textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                    <label for="message">Message<span class="rouge">*</span> : </label><textarea name="message" id="message" cols="30" rows="10" required></textarea>
                     <input type="submit" value="Envoyer">
             </form>
         </main>
@@ -68,12 +68,13 @@
 
         <div class="popupForm">
             <div class="resume">
-                <p>Votre nom : <span class="nom"></span></p>
-                <p>Votre prénom : <span class="prenom"></span></p>
-                <p>Votre adresse Email : <span class="mail"></span></p>
-                <p>Objet du message : <span class="obj"></span></p>
-                <p>Votre message : <span class="msg"></span></p>
-                <div class="flexbox"><button class="annuler">Annuler</button><button class="valider">Valider</button></div>
+                <h2>Résumé de votre message</h2>
+                <p>Votre nom : <span class="nom bold"></span></p>
+                <p>Votre prénom : <span class="prenom bold"></span></p>
+                <p>Votre adresse Email : <span class="mail bold"></span></p>
+                <p>Objet du message : <span class="obj bold"></span></p>
+                <p>Votre message : <span class="msg bold"></span></p>
+                <div class="flexbox"><button class="annuler"><img src="./img/fleche.svg" alt="Annuler" width="30px"></button><button class="valider lienVersProjet">Valider</button></div>
             </div>
         </div>
     </div>
