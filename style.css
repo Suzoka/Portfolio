@@ -881,6 +881,30 @@ input[type="submit"] {
     margin-left: auto;
 }
 
+.popupForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.842);
+    z-index: 10000000;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.resume {
+    color: white;
+}
+
+.resume .flexbox{
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 @-webkit-keyframes blink {
     0%,
     100% {

@@ -47,11 +47,11 @@
             </div>
             <h2 class="centre">Formulaire de contact</h2>
             <form action="./script/mail.php" method="POST" class="contactParMail">
-                    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"><br>
-                    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"><br>
-                    <label for="mail">Email : </label><input type="email" name="mail" id="mail"><br>
+                    <label for="nom">Nom* : </label><input type="text" name="nom" id="nom" required><br>
+                    <label for="prenom">Prénom* : </label><input type="text" name="prenom" id="prenom" required><br>
+                    <label for="mail">Email* : </label><input type="email" name="mail" id="mail" required><br>
                     <label for="objet">Objet : </label><textarea name="objet" id="objet" cols="30" rows="2"></textarea><br>
-                    <label for="message">Message : </label><textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <label for="message">Message* : </label><textarea name="message" id="message" cols="30" rows="10" required></textarea>
                     <input type="submit" value="Envoyer">
             </form>
         </main>
@@ -65,7 +65,20 @@
                         target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
             </div>
         </footer>
+
+        <div class="popupForm">
+            <div class="resume">
+                <p>Votre nom : <span class="nom"></span></p>
+                <p>Votre prénom : <span class="prenom"></span></p>
+                <p>Votre adresse Email : <span class="mail"></span></p>
+                <p>Objet du message : <span class="obj"></span></p>
+                <p>Votre message : <span class="msg"></span></p>
+                <div class="flexbox"><button class="annuler">Annuler</button><button class="valider">Valider</button></div>
+            </div>
+        </div>
     </div>
+
+    <script src="./script/contacts.js" defer></script>
 </body>
 
 </html>
