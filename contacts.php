@@ -46,16 +46,13 @@
                 </div>
             </div>
             <h2 class="centre">Formulaire de contact</h2>
-            <form action="./script/mail.php" method="POST" class="contacts">
-                <div>
-                    <label for="nom"></label><input type="text" name="nom" id="nom">
-                    <label for="prenom"></label><input type="text" name="prenom" id="prenom">
-                    <label for="mail"></label><input type="text" name="mail" id="mail">
-                </div>
-                <div>
-                    <label for="objet"></label><input type="text" name="objet" id="objet">
-                    <label for="message"></label><textarea name="message" id="message" cols="30" rows="10"></textarea>
-                </div>
+            <form action="./script/mail.php" method="POST" class="contactParMail">
+                    <label for="nom">Nom : </label><input type="text" name="nom" id="nom"><br>
+                    <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"><br>
+                    <label for="mail">Email : </label><input type="email" name="mail" id="mail"><br>
+                    <label for="objet">Objet : </label><textarea name="objet" id="objet" cols="30" rows="2"></textarea><br>
+                    <label for="message">Message : </label><textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Envoyer">
             </form>
         </main>
 

@@ -840,6 +840,47 @@ h1.centre {
     font-size: 0.8rem;
 }
 
+input:focus, textarea:focus, input[type=submit]:hover { 
+    outline: none; 
+    box-shadow: .3rem .3rem .6rem #6c6c6c, 
+    -.2rem -.2rem .5rem white;
+ }
+
+input, textarea, input[type=submit]:active {
+    border: none;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    box-shadow: inset 0.1rem 0.1rem 0.5rem #6c6c6c,
+    inset -0.1rem -0.1rem 0.5rem white;
+    background: none;
+    font-family: inherit;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+input {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 35px;
+}
+
+textarea {
+    display: inline-block;
+    vertical-align: top;
+}
+
+form.contactParMail {
+    text-align: right;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-left: auto;
+}
+
 @-webkit-keyframes blink {
     0%,
     100% {
