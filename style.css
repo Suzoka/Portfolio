@@ -784,6 +784,20 @@ div.ariane {
         -14px -14px 22px #ffffff;
 }
 
+.contacts>img {
+    width: 50%;
+    height: auto;
+}
+
+.contacts .listContacts {
+    width: 100%;
+}
+
+.contacts .listContacts ul{
+    margin: 0 auto;
+    width: fit-content;
+}
+
 .listContacts {
     width: 50%;
 }
@@ -879,10 +893,11 @@ form.contactParMail {
     margin-right: auto;
     margin-left: auto;
     display: grid;
-    grid-template-columns: repeat(2, 250px);
-    grid-template-rows: repeat(6, 75px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 75px) 1fr 75px;
     grid-gap: 10px;
     margin-bottom: 10px;
+    max-width: 750px;
 }
 
 input[type="submit"] {
@@ -1200,6 +1215,43 @@ button.valider {
         margin: 10px 0;
         padding-bottom: 10px;
     }
+
+    div.contacts {
+        flex-direction: column;
+        width: 80%;
+        max-width: 360px;
+    }
+
+    div.contacts .reseauxContact{
+        gap: 10px;
+    }
+
+    div.contacts .reseauxContact .lienCV{
+        padding: 3px 15px;
+        font-size: 0.9rem;
+    }
+
+    div.contacts .listContacts ul{
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .contacts>img{
+        width: auto;
+        height: 50%;
+    }
+
+    form.contactParMail {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 75px) 1fr 75px;
+        grid-gap: 10px;
+        width: 80%;
+    }
+
+    .gridC2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -1279,6 +1331,7 @@ button.valider {
 
     div.flexbox {
         left: 25px;
+        gap: 30px;
     }
 
     .reseaux {

@@ -29,7 +29,7 @@
             <h1 class="centre">Me contacter</h1>
             <!-- <h2>S'il vous venais à l'idée de vouloir complimenter ma moustache</h2> -->
             <div class="contacts">
-                <img src="./img/devMod.jpg" alt="" width="50%">
+                <img src="./img/devMod.jpg" alt="">
                 <div class="listContacts">
                     <ul>
                         <li><a href="tel:+33674111362">+33 6 74 11 13 62</a></li>
