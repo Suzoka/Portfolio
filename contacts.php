@@ -47,12 +47,12 @@
             </div>
             <h2 class="centre">Formulaire de contact</h2>
             <form action="./script/mail.php" method="POST" class="contactParMail">
-                    <label for="nom">Nom<span class="rouge">*</span> : </label><input type="text" name="nom" id="nom" required autocomplete="family-name"><br>
-                    <label for="prenom">Prénom<span class="rouge">*</span> : </label><input type="text" name="prenom" id="prenom" required autocomplete="given-name"><br>
-                    <label for="mail">Email<span class="rouge">*</span> : </label><input type="email" name="mail" id="mail" required autocomplete="email"><br>
-                    <label for="objet">Objet : </label><textarea name="objet" id="objet" cols="30" rows="2"></textarea><br>
-                    <label for="message">Message<span class="rouge">*</span> : </label><textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                    <input type="submit" value="Envoyer">
+                    <div><label for="nom">Nom<span class="rouge">*</span> : </label><input type="text" name="nom" id="nom" required autocomplete="family-name"></div>
+                    <div><label for="prenom">Prénom<span class="rouge">*</span> : </label><input type="text" name="prenom" id="prenom" required autocomplete="given-name"></div>
+                    <div class="gridC2"><label for="mail">Email<span class="rouge">*</span> : </label><input type="email" name="mail" id="mail" required autocomplete="email"></div>
+                    <div class="gridC2"><label for="objet">Objet : </label><input type="text" name="objet" id="objet"></input></div>
+                    <div class="gridC2 gridL2"><label for="message">Message<span class="rouge">*</span> : </label><textarea name="message" id="message" cols="75" rows="12" required></textarea></div>
+                    <div class="gridC2"><input type="submit" value="Envoyer"></div>
             </form>
         </main>
 

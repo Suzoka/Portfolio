@@ -73,7 +73,7 @@ a.lienProjet {
     justify-content: space-evenly;
 }
 
-.text>*{
+.text>* {
     margin: 0;
 }
 
@@ -167,7 +167,7 @@ div.hide {
     transition: 0.3s;
     width: 80px;
     -webkit-animation: arrow 3s infinite;
-            animation: arrow 3s infinite;
+    animation: arrow 3s infinite;
     z-index: 1000;
     margin-top: -25px;
 }
@@ -180,7 +180,7 @@ div.hide {
     transition: 0.3s;
     width: 80px;
     -webkit-animation: arrow 3s infinite;
-            animation: arrow 3s infinite;
+    animation: arrow 3s infinite;
     z-index: 1000;
     margin-top: -25px;
     visibility: hidden;
@@ -554,6 +554,7 @@ div.liens {
     gap: 15px;
     align-items: center;
 }
+
 .lienVersProjet {
     box-shadow: 5px 5px 16px #696969,
         -5px -5px 16px #ffffff;
@@ -625,9 +626,9 @@ div.ariane {
     box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
     border: none;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    background: url(./img/fleche.svg) no-repeat right 10% center ;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(./img/fleche.svg) no-repeat right 10% center;
     background-size: 13px;
     padding-right: 20px;
     width: 125px;
@@ -750,23 +751,23 @@ div.ariane {
     align-items: center;
 }
 
-.reseaux a{
+.reseaux a {
     -webkit-filter: saturate(0) invert(0.55) brightness(1.7) opacity(0.8);
-            filter: saturate(0) invert(0.55) brightness(1.7) opacity(0.8);
+    filter: saturate(0) invert(0.55) brightness(1.7) opacity(0.8);
     transition: 0.5s;
 }
 
 .reseaux a:hover {
     -webkit-filter: saturate(1) invert(0) brightness(1.4) opacity(1);
-            filter: saturate(1) invert(0) brightness(1.4) opacity(1);
+    filter: saturate(1) invert(0) brightness(1.4) opacity(1);
 }
 
 .reseaux a:nth-of-type(2):hover {
     -webkit-filter: saturate(0) invert(0.55) brightness(5) opacity(1);
-            filter: saturate(0) invert(0.55) brightness(5) opacity(1);
+    filter: saturate(0) invert(0.55) brightness(5) opacity(1);
 }
 
-.reseaux img{
+.reseaux img {
     height: 30px;
 }
 
@@ -779,8 +780,8 @@ div.ariane {
     margin-top: 30px;
     border-radius: 25px;
     overflow: hidden;
-    box-shadow:  14px 14px 22px #777777,
-    -14px -14px 22px #ffffff;
+    box-shadow: 14px 14px 22px #777777,
+        -14px -14px 22px #ffffff;
 }
 
 .listContacts {
@@ -804,7 +805,7 @@ div.ariane {
     color: black;
 }
 
-.reseauxContact{
+.reseauxContact {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -813,8 +814,8 @@ div.ariane {
 
 .lienCV {
     padding: 5px 25px;
-    box-shadow:  6px 6px 12px #8f8f8f,
-    -6px -6px 12px #ffffff;
+    box-shadow: 6px 6px 12px #8f8f8f,
+        -6px -6px 12px #ffffff;
 }
 
 .centre {
@@ -833,29 +834,33 @@ h1.centre {
     margin-top: 25px;
 }
 
-.lienProjet .lienVersProjet{
+.lienProjet .lienVersProjet {
     margin: 0;
     margin-top: 5px;
     margin-bottom: -15px;
     font-size: 0.8rem;
 }
 
-input:focus, textarea:focus, input[type=submit]:hover { 
-    outline: none; 
-    box-shadow: .3rem .3rem .6rem #6c6c6c, 
-    -.2rem -.2rem .5rem white;
- }
+input:focus,
+textarea:focus,
+input[type=submit]:hover {
+    outline: none;
+    box-shadow: .3rem .3rem .6rem #4b4b4b,
+        -.2rem -.2rem .5rem white;
+}
 
-input, textarea, input[type=submit]:active {
+input,
+textarea,
+input[type=submit]:active {
     border: none;
     border-radius: 1rem;
     padding-left: 1rem;
-    box-shadow: inset 0.1rem 0.1rem 0.5rem #6c6c6c,
-    inset -0.1rem -0.1rem 0.5rem white;
+    box-shadow: inset 0.1rem 0.1rem 0.5rem #4b4b4b,
+        inset -0.1rem -0.1rem 0.5rem white;
     background: none;
     font-family: inherit;
     margin-bottom: 20px;
-    width: 200px;
+    width: 100%;
 }
 
 input {
@@ -870,15 +875,35 @@ textarea {
 }
 
 form.contactParMail {
-    text-align: right;
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(6, 75px);
+    grid-gap: 10px;
+    margin-bottom: 10px;
 }
 
 input[type="submit"] {
     display: block;
     margin-left: auto;
+}
+
+form.contactParMail label {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 3px;
+}
+
+.gridC2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.gridL2 {
+    grid-row-start: 4;
+    grid-row-end: 7;
 }
 
 .popupForm {
@@ -899,7 +924,7 @@ input[type="submit"] {
     color: white;
 }
 
-.resume .flexbox{
+.resume .flexbox {
     left: 0;
     margin-right: auto;
     margin-left: auto;
@@ -931,6 +956,7 @@ button.valider {
 }
 
 @-webkit-keyframes blink {
+
     0%,
     100% {
         opacity: 0;
@@ -942,6 +968,7 @@ button.valider {
 }
 
 @keyframes blink {
+
     0%,
     100% {
         opacity: 0;
@@ -952,7 +979,7 @@ button.valider {
     }
 }
 
-@-webkit-keyframes arrow{
+@-webkit-keyframes arrow {
     0% {
         transform: translateY(0);
     }
@@ -974,7 +1001,7 @@ button.valider {
     }
 }
 
-@keyframes arrow{
+@keyframes arrow {
     0% {
         transform: translateY(0);
     }
@@ -1143,7 +1170,7 @@ button.valider {
 
 
 @media screen and (max-width: 750px) {
-    form.filtres{
+    form.filtres {
         flex-direction: column;
         gap: 20px;
         width: 90%;
@@ -1162,7 +1189,7 @@ button.valider {
         height: auto;
     }
 
-    .containerSlides .cont{
+    .containerSlides .cont {
         flex-direction: column;
         height: 750px;
     }
