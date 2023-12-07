@@ -13,14 +13,6 @@ document.querySelector('input[type="submit"]').addEventListener('click', functio
                 element.innerHTML = "<i>Non renseigné</i>";
             }
         });
-
-        document.querySelector('.annuler').addEventListener('click', function () {
-            document.querySelector('.popupForm').style.display = "none";
-        });
-        document.querySelector('.valider').addEventListener('click', function () {
-            document.querySelector('.popupForm').style.display = "none";
-            document.querySelector('form.contactParMail').submit();
-        });
     }
     else {
         if (document.querySelector('input[name="nom"]').value == "") {
@@ -43,4 +35,12 @@ document.querySelectorAll('input[required], textarea[required]').forEach(functio
     element.addEventListener('input', function () {
         this.style.border = "none";
     });
+});
+
+document.querySelector('.annuler').addEventListener('click', function () {
+    document.querySelector('.popupForm').style.display = "none";
+});
+document.querySelector('.valider').addEventListener('click', function () {
+    document.querySelector('form.contactParMail').submit();
+    document.querySelector('.popupForm').style.display = "none";
 });
