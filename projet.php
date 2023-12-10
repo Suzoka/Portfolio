@@ -19,10 +19,10 @@ if (isset($_GET["id"])) {
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@300;500&display=swap"
-        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@300;500&display=swap"
+            rel="stylesheet">
     </head>
 
     <body>
@@ -79,7 +79,7 @@ if (isset($_GET["id"])) {
                         if (sizeof($participants) > 1 || $participants[0]["id_membre"] != 1) {
                             ?>
                             <p class="membres">Groupe du projet :
-                                <?php foreach ($participants as $key=>$participant) {
+                                <?php foreach ($participants as $key => $participant) {
                                     ?><a href="<?= $participant["url_linkedin"] ?>">
                                         <?= $participant["identite"] ?>
                                     </a>
@@ -119,6 +119,19 @@ if (isset($_GET["id"])) {
                         </div>
                     </div>
                 </div>
+                <?php
+                $competences = getCompetences($projet["id_projet"]);
+                if (sizeof($competences) > 0) { ?>
+                <div class="competences">
+                    <ul>
+                        <?php foreach ($competences as $competence) { ?>
+                        <li>
+                            <?php echo ($competence["nom_competence"]); ?>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <?php } ?>
             </main>
 
             <footer>

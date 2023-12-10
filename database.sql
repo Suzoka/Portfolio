@@ -43,3 +43,8 @@ create table if not exists `contexte` (
     `ext_id_projet` int not null,
     `nom_contexte` varchar(255) not null
 );
+
+create table if not exists `apprentissages` (
+    `ext_id_projet` int not null,
+    `skill` text not null
+);

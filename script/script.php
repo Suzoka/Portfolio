@@ -102,4 +102,13 @@ function filtreContexte()
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function getCompetences($id)
+{
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM `apprentissage` where ext_id_projet = :id;');
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
