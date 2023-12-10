@@ -47,11 +47,11 @@ include './script/script.php';
             </div>
             <section class="content">
                 <h2 class="welcome">Bienvenue sur mon portfolio !</h2>
-                <p>Je m'appel Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT
-                        MMI</span>. Dans cette filière polyvalente, j'ai choisis de suivre le parcours <span
-                        class="bold">"Développement Web et dispositifs intéractifs"</span>, dans l'optique de devenir
+                <p>Je m'appelle Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT
+                        MMI</span>. Dans cette filière polyvalente, j'ai choisi de suivre le parcours <span
+                        class="bold">"Développement Web et dispositifs interactifs"</span>, dans l'optique de devenir
                     développeur fullstack. Vous trouverez dans ce portfolio différents de mes projets, qu'ils soient
-                    personnels ou scolaire. <br><br> Avec ce portfolio, vous avez un moyen de plonger dans ce que je
+                    personnels ou scolaires. <br><br> Avec ce portfolio, vous avez un moyen de plonger dans ce que je
                     suis capable de faire, et j'espère sincèrement que cette exploration à travers mon univers
                     vous plaira !</p>
                 <a href="./qui-suis-je.php" class="linkAlone">En savoir plus sur moi</a>

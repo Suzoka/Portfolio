@@ -76,14 +76,16 @@ if (isset($_GET["id"])) {
                     <div class="infoAll">
                         <?php
                         $participants = getParticipants($projet["id_projet"]);
-                        if (sizeof($participants) > 1) {
+                        if (sizeof($participants) > 1 || $participants[0]["id_membre"] != 1) {
                             ?>
                             <p class="membres">Groupe du projet :
-                                <?php foreach ($participants as $participant) {
+                                <?php foreach ($participants as $key=>$participant) {
                                     ?><a href="<?= $participant["url_linkedin"] ?>">
                                         <?= $participant["identite"] ?>
-                                    </a>,
-                                    <?php
+                                    </a>
+                                    <?php if ($key != sizeof($participants) - 1) {
+                                        echo ", ";
+                                    }
                                 } ?>
                             </p>
                             <?php
