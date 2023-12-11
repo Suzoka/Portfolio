@@ -20,7 +20,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h2 span {
     font-family: 'Rubik', sans-serif;
     font-weight: 800;
 }
@@ -474,12 +475,13 @@ div.projet {
     align-items: center;
     margin-top: 35px;
     grid-template-columns: 25px 3fr 15px 2fr 25px;
-    grid-template-rows: repeat(4, fit-content(100px));
+    grid-template-rows: repeat(5, fit-content(100px));
     grid-template-areas:
         ". img . titre ."
         ". img . texte ."
         ". img . infos ."
-        ". pin . infos .";
+        ". pin . infos ."
+        ". competences . . .";
     max-width: 1500px;
     margin-right: auto;
     margin-left: auto;
@@ -588,6 +590,7 @@ div.ariane {
 
 .lienRetour {
     display: block;
+    align-self: center;
 }
 
 .filAriane {
@@ -970,6 +973,35 @@ button.valider {
     box-shadow: none;
 }
 
+div.competences {
+    background-color: #f4f4f4;
+    width: fit-content;
+    padding: 10px 25px 10px 5px;
+    border-radius: 25px;
+    grid-area: competences;
+    margin-top: 50px;
+    margin-left: 9%;
+    margin-bottom: 30px;
+}
+
+.competences h2 {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 25px;
+    padding-right: 5px;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+span.decale {
+    margin-left: 130px;
+}
+
+.competences ul {
+    list-style-type: "- ";
+    line-height: 1.75;
+}
+
 @-webkit-keyframes blink {
 
     0%,
@@ -1063,7 +1095,8 @@ button.valider {
             ". img ."
             ". pin ."
             ". texte ."
-            ". infos .";
+            ". infos ."
+            ". competences .";
         gap: 15px;
         max-width: 550px;
         margin-top: 50px;
@@ -1085,6 +1118,13 @@ button.valider {
 
     .date {
         margin-right: 25%;
+    }
+
+    div.competences {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+        max-width: 500px;
     }
 }
 
@@ -1336,5 +1376,9 @@ button.valider {
 
     .reseaux {
         gap: 15px;
+    }
+
+    span.decale {
+        margin-left: 0;
     }
 }

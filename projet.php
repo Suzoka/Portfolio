@@ -118,20 +118,21 @@ if (isset($_GET["id"])) {
                             </div>
                         </div>
                     </div>
+                    <?php
+                    $competences = getCompetences($projet["id_projet"]);
+                    if (sizeof($competences) > 0) { ?>
+                        <div class="competences">
+                            <h2>Ce que ce projet <br> <span class="decale">m'a appris</span></h2>
+                            <ul>
+                                <?php foreach ($competences as $competence) { ?>
+                                    <li>
+                                        <?php echo ($competence["skill"]); ?>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    <?php } ?>
                 </div>
-                <?php
-                $competences = getCompetences($projet["id_projet"]);
-                if (sizeof($competences) > 0) { ?>
-                <div class="competences">
-                    <ul>
-                        <?php foreach ($competences as $competence) { ?>
-                        <li>
-                            <?php echo ($competence["nom_competence"]); ?>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-                <?php } ?>
             </main>
 
             <footer>
