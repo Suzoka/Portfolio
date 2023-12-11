@@ -132,8 +132,8 @@ if (isset($_GET["id"])) {
 
             <footer>
                 <div class="lien">
-                    <a href="" title="">Mentions légales</a>
-                    <a href="" title="">Plan du site</a>
+                    <a href="./mentionslegals.php" title="">Mentions légales</a>
+                    <a href="./plansite.php" title="">Plan du site</a>
                     <div class="reseaux"><a href="https://www.linkedin.com/in/morgan-zarka/" target="_blank"><img
                                 src="./img/linkedin.png" alt="Profil LinkedIn"></a><a href="https://github.com/Suzoka"
                             target="_blank"><img src="./img/github.png" alt="Profil GitHub"></a></div>
