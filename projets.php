@@ -91,6 +91,9 @@ if (!isset($_POST["contexte"])) {
                             ?>
                         </select>
                     </div>
+                    <?php if ($_POST["techno"] != 0 || $_POST["etat"] != 0 || $_POST["contexte"] != 0) { ?>
+                        <a href="./projets.php"><img src="./img/reset.png" alt="réinitialiser les filtres" width="40"></a>
+                    <?php } ?>
                 </form>
                 <div class="flexCenter">
                     <div class="timeline">

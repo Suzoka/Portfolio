@@ -615,6 +615,7 @@ div.ariane {
     max-width: 1500px;
     margin: 10px auto 0 auto;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .filtre {
@@ -1336,6 +1337,10 @@ span.decale {
     .date {
         margin-right: 7.5%;
     }
+
+    span.decale {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -1376,9 +1381,5 @@ span.decale {
 
     .reseaux {
         gap: 15px;
-    }
-
-    span.decale {
-        margin-left: 0;
     }
 }
