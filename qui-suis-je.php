@@ -42,36 +42,27 @@
           <div class="slide active ">
             <div class="texte">
               <h3>L'escalade</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
-              </p>
+              <p>J'arrive à grimper des voies 6B en moulinette et 6A en tête.
+Je sais également faire de l'assurage par le haut, de la descente en rappel ainsi que de la grimpe en flèche. À chaque fois que je pratique ce sport, je prend beaucoup de plaisir, et je pourrais en faire tout les jours sans m'en lasser.</p>
             </div>
           </div>
           <div class="slide nonActive">
             <div class="texte">
               <h3>La plongée</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
+              <p>Je suis détenteur de l'Advanced Open Water Diver. Ce diplome me permet donc de pouvoir plonger à 30 mètres de profondeur. J'ai également la certification Nitrox, permetant de plonger avec des bouteilles enrichis en oxygène. J'adore vraiment la sensation de liberté que l'on peux ressentir sous l'eau.
               </p>
             </div>
           </div>
           <div class="slide nonActive">
             <div class="texte">
               <h3>L'apnée</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
-              </p>
+              <p>Je ne peux pas me retenir quand il s'agit du monde sous marin. C'est pourquoi lorsque je n'ai pas la possibilité de plongée, je descend sous l'eau en apnée, afin de rendre visite à mes amis les poissons. Dans cette discipline, j'ai déjà réussi à descendre à 18 mètres de profondeur.</p>
             </div>
           </div>
           <div class="slide nonActive">
             <div class="texte">
               <h3>La photographie</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
-                autem ratione. Ipsam est non ratione rerum, distinctio omnis, corporis expedita amet maiores
-                reprehenderit
+              <p>La photographie est un loisir que j'ai appris en autodidacte. J'aime beaucoup figer des moments de vie, dans le but de rendre heureux par la suite. J'ai une préférence pour la prise de photos dans le domaine de l'évènementiel. <a href="https://photos.app.goo.gl/jXPsXTwxKxNKDmxeA" target="_blank">Ici quelques exemples de mes photos.</a>
               </p>
             </div>
           </div>

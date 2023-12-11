@@ -40,7 +40,7 @@
                     </ul>
                 </div>
             </div>
-            <h2 class="centre">Formulaire de contact</h2>
+            <h2 class="centre">Pour me contacter rapidement !</h2>
             <form action="./script/mail.php" method="POST" class="contactParMail">
                     <div><label for="nom">Nom<span class="rouge">*</span> : </label><input type="text" name="nom" id="nom" required autocomplete="family-name"></div>
                     <div><label for="prenom">Prénom<span class="rouge">*</span> : </label><input type="text" name="prenom" id="prenom" required autocomplete="given-name"></div>

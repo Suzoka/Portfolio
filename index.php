@@ -40,7 +40,7 @@ include './script/script.php';
                 </div>
             </div>
             <section class="content">
-                <h2 class="welcome">Bienvenue sur mon portfolio !</h2>
+                <h2 class="welcome">Découvrez la plus belle moustache du web !</h2>
                 <p>Je m'appelle Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT
                         MMI</span>. Dans cette filière polyvalente, j'ai choisi de suivre le parcours <span
                         class="bold">"Développement Web et dispositifs interactifs"</span>, dans l'optique de devenir

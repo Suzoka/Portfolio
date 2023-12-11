@@ -712,6 +712,10 @@ div.ariane {
     margin-top: 7px;
 }
 
+.slide a {
+    color: white;
+}
+
 .active {
     flex-grow: 1;
     transition: 1s;
