@@ -80,6 +80,10 @@ include './script/script.php';
                             <p class="lienVersProjet">En savoir plus</p>
                         </a>
                     <?php } ?>
+                    <a href="./projets.php" class="lienProjet">
+                        <h3>Voir plus de projets</h3>
+                        <p>Tu es arrivé au bout de ce slider, mais tu peux voir l'intégralité de mes projets ici</p>
+                    </a>
                 </div>
                 <img src="./img/fleche.svg" alt="" width="75" class="sliderDroite">
                 <img src="./img/fleche.svg" alt="" width="75" class="sliderGauche">

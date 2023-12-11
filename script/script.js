@@ -29,7 +29,7 @@ function animation(anime) {
                     clone.style.transition = '0.5s';
                     clone.style.scale = 12;
                     setTimeout(function () {
-                        window.location.href = "./projet.php?id=" + element.id;
+                        window.location.href = element.getAttribute('href');
                         setTimeout(function () {
                             clone.remove();
                             element.removeAttribute('style');
