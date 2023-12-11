@@ -8,11 +8,6 @@
     <title>Contacts | Morgan ZARKA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@300;500&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>

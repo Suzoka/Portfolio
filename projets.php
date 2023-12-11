@@ -19,11 +19,6 @@ if (!isset($_POST["contexte"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets | Morgan ZARKA</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@300;500&display=swap"
-        rel="stylesheet">
     <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
 </head>
 

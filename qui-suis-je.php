@@ -9,11 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Qui suis-je ? | Morgan ZARKA</title>
   <link rel="stylesheet" href="style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Rubik:wght@300;500&display=swap"
-    rel="stylesheet">
   <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
 </head>
 
@@ -46,7 +41,7 @@
       </section>
       <div class="containerSlides">
         <div class="cont">
-          <div class="slide slide1 active ">
+          <div class="slide active ">
             <div class="texte">
               <h3>L'escalade</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
@@ -55,7 +50,7 @@
               </p>
             </div>
           </div>
-          <div class="slide slide2 nonActive">
+          <div class="slide nonActive">
             <div class="texte">
               <h3>La plongée</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
@@ -64,7 +59,7 @@
               </p>
             </div>
           </div>
-          <div class="slide slide3 nonActive">
+          <div class="slide nonActive">
             <div class="texte">
               <h3>L'apnée</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
@@ -73,7 +68,7 @@
               </p>
             </div>
           </div>
-          <div class="slide slide4 nonActive">
+          <div class="slide nonActive">
             <div class="texte">
               <h3>La photographie</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur nisi animi saepe, repellat
