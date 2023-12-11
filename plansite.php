@@ -22,9 +22,19 @@
         </header>
 
         <main>
-
-
-
+            <section class="content">
+                <h1>Plan du site</h1>
+                <h2>Liste des pages du site</h2>
+                <ul>
+                    <li><a href="./index.php">Accueil</a></li>
+                    <li><a href="./contacts.php">Contact</a></li>
+                    <li><a href="./mentionslegals.php">Mentions légales</a></li>
+                    <li><a href="./projets.php">Mes projets</a></li>
+                    <li><a href="./projet.php?id=1">Page d'un projet</a> (l'id dans l'url fait varier le projet)</li>
+                    <li><a href="./plansite.php">Plan du site</a></li>
+                    <li><a href="./qui-suis-je.php">Qui suis-je ?</a></li>
+                </ul>
+            </section>
         </main>
 
         <footer>
