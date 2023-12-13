@@ -8,6 +8,7 @@
     <title>Plan du site | Morgan ZARKA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
+    <link href="https://morganzarka.dev/plansite.php" rel="canonical">
 </head>
 
 <body>

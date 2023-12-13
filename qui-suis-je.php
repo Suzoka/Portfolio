@@ -8,6 +8,7 @@
   <title>Qui suis-je ? | Morgan ZARKA</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
+  <link href="https://morganzarka.dev/qui-suis-je.php" rel="canonical">
 </head>
 
 <body>

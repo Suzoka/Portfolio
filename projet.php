@@ -18,6 +18,7 @@ if (isset($_GET["id"])) {
         </title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="./img/filigrane.svg" type="image/svg+xml">
+        <link href="https://morganzarka.dev/projet.php" rel="canonical">
     </head>
 
     <body>
