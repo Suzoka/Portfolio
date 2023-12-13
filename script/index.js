@@ -5,6 +5,7 @@ if (sessionStorage.getItem("video")) {
     typing = 1000;
 }
 else {
+    document.querySelector('.wrapper').style.display = "none"
     setTimeout(function () {
         document.querySelector('video.logo').play()
     }, 600)
