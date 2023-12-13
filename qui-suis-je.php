@@ -28,13 +28,13 @@
         <h2>Un peu plus sur moi</h2>
         <p>Étudiant en <span class="bold">BUT MMI</span> (<span class="bold">Métiers du multimédia et de
             l'internet</span>) aux <span class="bold">IUT de Marne la vallée</span> (<span class="bold">Université
-            Gustave Eiffel</span>). Dans cette formation polyvalente, j'y apprend le développement web, la création
+            Gustave Eiffel</span>). Dans cette formation polyvalente, j'y apprends le développement web, la création
           numérique, ainsi que la communication et la gestion de projet. <br><br> Passionné par le domaine de
           l'informatique depuis la classe de 5ème, je me suis naturellement orienté vers un <span class="bold">BAC
             STI2D</span> spécialité <span class="bold">SIN</span> (<span class="bold">Systèmes d'Information et
             Numérique</span>), au sein du lycée Martin Luther King. Durant ces années, mon envie de travailler dans la
-          programation s'est confirmée, et c'est ainsi que je suis arrivé en MMI, en choisissant le parcours "<span
-            class="bold">Développement Web et dispositifs intéractifs</span>".
+          programmation s'est confirmée, et c'est ainsi que je suis arrivé en MMI, en choisissant le parcours "<span
+            class="bold">Développement Web et dispositifs interactifs</span>".
         </p>
         <h2>Mes passions</h2>
       </section>
@@ -45,24 +45,24 @@
               <h3>L'escalade</h3>
               <p>J'arrive à grimper des voies 6B en moulinette et 6A en tête.
                 Je sais également faire de l'assurage par le haut, de la descente en rappel ainsi que de la grimpe en
-                flèche. À chaque fois que je pratique ce sport, je prend beaucoup de plaisir, et je pourrais en faire
-                tout les jours sans m'en lasser.</p>
+                flèche. À chaque fois que je pratique ce sport, je prends beaucoup de plaisir, et je pourrais en faire
+                tous les jours sans m'en lasser.</p>
             </div>
           </div>
           <div class="slide nonActive">
             <div class="texte">
               <h3>La plongée</h3>
-              <p>Je suis détenteur de l'Advanced Open Water Diver. Ce diplome me permet donc de pouvoir plonger à 30
-                mètres de profondeur. J'ai également la certification Nitrox, permetant de plonger avec des bouteilles
-                enrichis en oxygène. J'adore vraiment la sensation de liberté que l'on peux ressentir sous l'eau.
+              <p>Je suis détenteur de l'Advanced Open Water Diver. Ce diplôme me permet donc de pouvoir plonger à 30
+                mètres de profondeur. J'ai également la certification Nitrox, permettant de plonger avec des bouteilles
+                enrichis en oxygène. J'adore vraiment la sensation de liberté que l'on peut ressentir sous l'eau.
               </p>
             </div>
           </div>
           <div class="slide nonActive">
             <div class="texte">
               <h3>L'apnée</h3>
-              <p>Je ne peux pas me retenir quand il s'agit du monde sous marin. C'est pourquoi lorsque je n'ai pas la
-                possibilité de plongée, je descend sous l'eau en apnée, afin de rendre visite à mes amis les poissons.
+              <p>Je ne peux pas me retenir quand il s'agit du monde sous-marin. C'est pourquoi lorsque je n'ai pas la
+                possibilité de plongée, je descends sous l'eau en apnée, afin de rendre visite à mes amis les poissons.
                 Dans cette discipline, j'ai déjà réussi à descendre à 18 mètres de profondeur.</p>
             </div>
           </div>
@@ -71,7 +71,7 @@
               <h3>La photographie</h3>
               <p>La photographie est un loisir que j'ai appris en autodidacte. J'aime beaucoup figer des moments de vie,
                 dans le but de rendre heureux par la suite. J'ai une préférence pour la prise de photos dans le domaine
-                de l'évènementiel. <a href="https://photos.app.goo.gl/jXPsXTwxKxNKDmxeA" target="_blank">Ici quelques
+                de l'événementiel. <a href="https://photos.app.goo.gl/jXPsXTwxKxNKDmxeA" target="_blank">Ici quelques
                   exemples de mes photos.</a>
               </p>
             </div>

@@ -29,7 +29,7 @@
                 <h2>Présentation du site</h2>
 
                 <p>
-                    Ce site à été créé et édité par Morgan ZARKA (morgan.zarka@edu.univ-eiffel.fr)<br><br>
+                    Ce site a été créé et édité par Morgan ZARKA (morgan.zarka@edu.univ-eiffel.fr)<br><br>
                     Il est hébergé sur les serveurs d'Infomaniak Network SA<br>
                     Rue Eugène-Marziano 25, 1227 Genève, Suisse <br>
                     Registre du commerce du canton de Genève : CH-660.0.059.996-1<br>
@@ -71,7 +71,7 @@
                     Le site utilise les technologies JavaScript, PHP, HTML et CSS. Le site Internet ne pourra être tenu
                     responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site
                     s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un
-                    navigateur de dernière génération mis-à-jour.
+                    navigateur de dernière génération mis à jour.
                 </p>
 
                 <h2>Propriété intellectuelle et contrefaçons</h2>
@@ -116,7 +116,7 @@
                 <h2>Gestion des données personnelles</h2>
 
                 <p>
-                    Le présent site ne traitant aucune données personnalisés, le RGPD ne s'applique pas
+                    Le présent site ne traitant aucune donnée personnalisée, le RGPD ne s'applique pas
                 </p>
 
                 <h2>Droit applicable et attribution de juridiction</h2>
