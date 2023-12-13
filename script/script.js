@@ -13,7 +13,7 @@ function animation(anime) {
                 clone.style.top = position.top + "px";
                 clone.style.left = position.left + "px";
                 clone.style.position = "fixed";
-                clone.style.zIndex = 1000;
+                clone.style.zIndex = 100000;
                 clone.style.scale = 1.03;
 
 
