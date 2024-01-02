@@ -1,6 +1,6 @@
 # Portfolio de Morgan ZARKA
 
-## Pour installer le site ResaWeb en local:
+## Pour installer le portfolio en local:
 
 Installer le site en local :
 
