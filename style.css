@@ -95,7 +95,7 @@ a.lienProjet {
     flex-wrap: wrap;
     text-decoration: none;
     color: black;
-    gap: 15px;
+    gap: 10px;
 }
 
 .text {
@@ -119,7 +119,7 @@ a.lienProjet {
     justify-content: center;
     width: 90%;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 7px;
 }
 
 .theme p {
