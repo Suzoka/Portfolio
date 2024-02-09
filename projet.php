@@ -95,11 +95,6 @@ if (isset($_GET["id"])) {
                             <p>Projet
                                 <?= $projet["nom_contexte"] ?>
                             </p>
-                            <?php if ($projet["note_finale"] != NULL) { ?>
-                                <p>Note :
-                                    <?= $projet["note_finale"] ?>/20
-                                </p>
-                            <?php } ?>
                             <?php if ($projet["url"] != NULL || $projet["lien_github"] != NULL) { ?>
                                 <div class="liens">
                                     <?php if ($projet["url"] != NULL) { ?>
