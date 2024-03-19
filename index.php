@@ -45,7 +45,7 @@ include './script/script.php';
                 <p>Je m'appelle Morgan, j'ai 19 ans, et je suis étudiant en deuxième année de <span class="bold">BUT
                         MMI</span>. Dans cette filière polyvalente, j'ai choisi de suivre le parcours <span
                         class="bold">"Développement Web et dispositifs interactifs"</span>, dans l'optique de devenir
-                    développeur fullstack. Vous trouverez dans ce portfolio différents de mes projets, qu'ils soient
+                    développeur fullstack. Vous trouverez dans ce portfolio plusieurs de mes projets, qu'ils soient
                     personnels ou scolaires. <br><br> Avec ce portfolio, vous avez un moyen de plonger dans ce que je
                     suis capable de faire, et j'espère sincèrement que cette exploration à travers mon univers
                     vous plaira !</p>
