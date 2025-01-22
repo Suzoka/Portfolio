@@ -70,7 +70,7 @@ INSERT INTO `apprentissage` (`ext_id_projet`, `skill`) VALUES
 (7, 'Créer un site dans un temps très limité'),
 (7, 'Passer tout de même un bon moment malgré les précédents points'),
 (3, 'Utilisation d\'After Effects'),
-(3, 'Création de dérives à partir d\'une base (plusieurs versions de l\'animation)'),
+(3, 'Création de variants à partir d\'une base (plusieurs versions de l\'animation)'),
 (8, 'Programmation orientée objets'),
 (9, 'Faire des mouvements de caméra'),
 (9, 'Faire des transitions créatives'),
